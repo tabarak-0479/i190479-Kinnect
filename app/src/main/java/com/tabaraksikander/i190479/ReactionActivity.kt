@@ -12,6 +12,7 @@ class ReactionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reaction)
         Ui.prepare(this)
+        findViewById<View>(R.id.reactionScrim).setOnClickListener {finish()}
         findViewById<View>(R.id.btnComments).setOnClickListener { startActivity(Intent(this, CommentsActivity::class.java)) }
         findViewById<View>(R.id.reaction0).setOnClickListener { getSharedPreferences("demo", MODE_PRIVATE).edit().putString("reaction", "Like").apply(); finish() }
         findViewById<View>(R.id.reaction1).setOnClickListener { getSharedPreferences("demo", MODE_PRIVATE).edit().putString("reaction", "Love").apply(); finish() }

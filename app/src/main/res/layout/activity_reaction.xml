@@ -7,36 +7,70 @@
       </LinearLayout>
       <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8" />
       <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp">
-        <TextView android:layout_width="44dp" android:layout_height="44dp" android:text="LM" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_purple" android:gravity="center" android:textStyle="bold" />
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lina Marsh is at Clifton Beach" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" android:padding="16dp" />
+        <TextView android:layout_width="40dp" android:layout_height="40dp" android:text="LM" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_purple" android:gravity="center" android:textStyle="bold" />
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="10dp">
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lina Marsh is at Clifton Beach" android:textSize="16sp" android:textColor="#252722" android:textStyle="bold" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2h · Public" android:textSize="13sp" android:textColor="#62655F" />
+        </LinearLayout>
+        <ImageButton android:layout_width="36dp" android:layout_height="48dp" android:id="@+id/btnPostMore" android:src="@drawable/ic_more" android:background="@android:color/transparent" android:padding="12dp" android:contentDescription="More" app:tint="#0B5F63" />
+        <ImageButton android:layout_width="36dp" android:layout_height="48dp" android:id="@+id/btnHidePost" android:src="@drawable/ic_close" android:background="@android:color/transparent" android:padding="12dp" android:contentDescription="Close" app:tint="#0B5F63" />
       </LinearLayout>
-      <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sunset walk with the crew. Worth every grain of sand in my shoes." android:textSize="14sp" android:textColor="#252722" android:padding="16dp" />
-      <ImageView android:layout_width="match_parent" android:layout_height="300dp" android:src="@drawable/landscape_sand" android:scaleType="centerCrop" android:contentDescription="Landscape illustration" />
-      <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aisha and 1.2K others         86 comments" android:textSize="14sp" android:textColor="#252722" android:padding="16dp" />
+      <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Sunset walk with the crew. Worth every grain of sand in my shoes." android:textSize="16sp" android:textColor="#252722" android:padding="16dp" />
+      <ImageView android:layout_width="match_parent" android:layout_height="330dp" android:src="@drawable/landscape_sand" android:scaleType="centerCrop" android:contentDescription="Landscape illustration" />
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="12dp">
+        <FrameLayout android:layout_width="48dp" android:layout_height="20dp">
+          <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/reaction_like" android:contentDescription="" android:importantForAccessibility="no" />
+          <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/reaction_love_icon" android:contentDescription="" android:importantForAccessibility="no" android:layout_marginStart="14dp" />
+          <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/reaction_haha" android:contentDescription="" android:importantForAccessibility="no" android:layout_marginStart="28dp" />
+        </FrameLayout>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="Aisha and 1.2K others" android:textSize="13sp" android:textColor="#252722" android:layout_weight="1" android:paddingStart="4dp" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="86 comments · 12 shares" android:textSize="13sp" android:textColor="#252722" />
+      </LinearLayout>
+      <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8" />
       <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
-        <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnLike" android:src="@drawable/ic_like" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Like" app:tint="#0B5F63" />
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Like" android:textSize="14sp" android:textColor="#252722" />
-        <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnComments" android:src="@drawable/ic_comment" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Comment" app:tint="#0B5F63" />
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Comment" android:textSize="14sp" android:textColor="#252722" />
+        <LinearLayout android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:orientation="horizontal" android:gravity="center" android:id="@+id/btnLike" android:clickable="true" android:focusable="true" android:contentDescription="Like">
+          <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_like" android:contentDescription="" android:importantForAccessibility="no" android:id="@+id/btnLikeIcon" app:tint="#62655F" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Like" android:textSize="14sp" android:textColor="#252722" android:paddingStart="6dp" android:id="@+id/btnLikeLabel" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:orientation="horizontal" android:gravity="center" android:id="@+id/btnComments" android:clickable="true" android:focusable="true" android:contentDescription="Comment">
+          <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_comment" android:contentDescription="" android:importantForAccessibility="no" android:id="@+id/btnCommentsIcon" app:tint="#62655F" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Comment" android:textSize="14sp" android:textColor="#252722" android:paddingStart="6dp" android:id="@+id/btnCommentsLabel" />
+        </LinearLayout>
       </LinearLayout>
+      <View android:layout_width="match_parent" android:layout_height="8dp" android:background="#DFDFD8" />
       <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Most relevant" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" android:padding="16dp" />
-      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingTop="12dp">
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp">
         <TextView android:layout_width="32dp" android:layout_height="32dp" android:text="AK" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_red" android:gravity="center" android:textStyle="bold" />
-        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:padding="12dp" android:background="@drawable/bubble_in" android:layout_marginStart="8dp">
-          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aisha Khan" android:textSize="14sp" android:textColor="#252722" android:textStyle="bold" />
-          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="That sky is unreal." android:textSize="14sp" android:textColor="#252722" />
-          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2h    Like    Reply" android:textSize="12sp" android:textColor="#252722" android:paddingTop="8dp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp" android:background="@drawable/bubble_in" android:layout_marginStart="8dp">
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aisha Khan" android:textSize="16sp" android:textColor="#252722" android:textStyle="bold" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="That sky is unreal." android:textSize="16sp" android:textColor="#252722" />
         </LinearLayout>
       </LinearLayout>
     </LinearLayout>
-    <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="#55000000" />
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:background="@drawable/card_white" android:padding="6dp" android:layout_gravity="center" android:layout_margin="16dp">
-      <TextView android:layout_width="0dp" android:layout_height="56dp" android:text="👍" android:textSize="28sp" android:textColor="#252722" android:layout_weight="1" android:gravity="center" android:id="@+id/reaction0" android:clickable="true" android:focusable="true" android:contentDescription="Like" />
-      <TextView android:layout_width="0dp" android:layout_height="56dp" android:text="♥" android:textSize="28sp" android:textColor="#252722" android:layout_weight="1" android:gravity="center" android:id="@+id/reaction1" android:clickable="true" android:focusable="true" android:contentDescription="Love" />
-      <TextView android:layout_width="0dp" android:layout_height="56dp" android:text="😄" android:textSize="28sp" android:textColor="#252722" android:layout_weight="1" android:gravity="center" android:id="@+id/reaction2" android:clickable="true" android:focusable="true" android:contentDescription="Haha" />
-      <TextView android:layout_width="0dp" android:layout_height="56dp" android:text="😮" android:textSize="28sp" android:textColor="#252722" android:layout_weight="1" android:gravity="center" android:id="@+id/reaction3" android:clickable="true" android:focusable="true" android:contentDescription="Wow" />
-      <TextView android:layout_width="0dp" android:layout_height="56dp" android:text="😢" android:textSize="28sp" android:textColor="#252722" android:layout_weight="1" android:gravity="center" android:id="@+id/reaction4" android:clickable="true" android:focusable="true" android:contentDescription="Sad" />
-      <TextView android:layout_width="0dp" android:layout_height="56dp" android:text="😡" android:textSize="28sp" android:textColor="#252722" android:layout_weight="1" android:gravity="center" android:id="@+id/reaction5" android:clickable="true" android:focusable="true" android:contentDescription="Angry" />
-    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="#55000000" android:id="@+id/reactionScrim" android:clickable="true" android:focusable="true" android:contentDescription="Dismiss reaction picker" />
+    <FrameLayout android:layout_width="match_parent" android:layout_height="92dp" android:layout_gravity="center" android:layout_marginHorizontal="14dp" android:translationY="40dp">
+      <View android:layout_width="match_parent" android:layout_height="56dp" android:layout_gravity="bottom" android:background="@drawable/reaction_pill" />
+      <LinearLayout android:layout_width="match_parent" android:layout_height="92dp" android:orientation="horizontal" android:gravity="center_vertical">
+        <FrameLayout android:layout_width="0dp" android:layout_height="92dp" android:layout_weight="1" android:id="@+id/reaction0" android:clickable="true" android:focusable="true" android:contentDescription="Like">
+          <ImageView android:layout_width="36dp" android:layout_height="36dp" android:src="@drawable/reaction_like" android:layout_gravity="center_horizontal|bottom" android:layout_marginBottom="10dp" android:contentDescription="Like" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="0dp" android:layout_height="92dp" android:layout_weight="1" android:id="@+id/reaction1" android:clickable="true" android:focusable="true" android:contentDescription="Love">
+          <TextView android:layout_width="48dp" android:layout_height="24dp" android:text="Love" android:textSize="12sp" android:textColor="#FFFFFF" android:textStyle="bold" android:gravity="center" android:background="@drawable/dark_pill" android:layout_gravity="top|center_horizontal" />
+          <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/reaction_love_icon" android:layout_gravity="center_horizontal|bottom" android:layout_marginBottom="20dp" android:contentDescription="Love" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="0dp" android:layout_height="92dp" android:layout_weight="1" android:id="@+id/reaction2" android:clickable="true" android:focusable="true" android:contentDescription="Haha">
+          <ImageView android:layout_width="36dp" android:layout_height="36dp" android:src="@drawable/reaction_haha" android:layout_gravity="center_horizontal|bottom" android:layout_marginBottom="10dp" android:contentDescription="Haha" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="0dp" android:layout_height="92dp" android:layout_weight="1" android:id="@+id/reaction3" android:clickable="true" android:focusable="true" android:contentDescription="Wow">
+          <ImageView android:layout_width="36dp" android:layout_height="36dp" android:src="@drawable/reaction_wow" android:layout_gravity="center_horizontal|bottom" android:layout_marginBottom="10dp" android:contentDescription="Wow" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="0dp" android:layout_height="92dp" android:layout_weight="1" android:id="@+id/reaction4" android:clickable="true" android:focusable="true" android:contentDescription="Sad">
+          <ImageView android:layout_width="36dp" android:layout_height="36dp" android:src="@drawable/reaction_sad" android:layout_gravity="center_horizontal|bottom" android:layout_marginBottom="10dp" android:contentDescription="Sad" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="0dp" android:layout_height="92dp" android:layout_weight="1" android:id="@+id/reaction5" android:clickable="true" android:focusable="true" android:contentDescription="Angry">
+          <ImageView android:layout_width="36dp" android:layout_height="36dp" android:src="@drawable/reaction_angry" android:layout_gravity="center_horizontal|bottom" android:layout_marginBottom="10dp" android:contentDescription="Angry" />
+        </FrameLayout>
+      </LinearLayout>
+    </FrameLayout>
   </FrameLayout>
 </LinearLayout>
