@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-/** A small local story sequence with visible progress and a sendable reply. */
+/** Local story sequence with person/image/progress state. A submitted reply is stored under that person so it appears in their conversation. */
 class StoryViewerActivity : AppCompatActivity() {
     private val people=listOf("Omar Farooq","Sara Iqbal","Hamza Ali","Lina Marsh")
     private var index=0

@@ -6,6 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 
+/** Timed splash: display the XML branding, then open Login and finish so Back does not reopen the splash. */
 class MainActivity : AppCompatActivity() {
     private val splashHandler = Handler(Looper.getMainLooper())
 

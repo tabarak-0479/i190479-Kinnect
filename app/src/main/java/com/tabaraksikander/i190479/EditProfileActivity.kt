@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-/** Each editable field and both image selections are saved locally. */
+/** All seven fields and selected avatar/cover IDs are saved together. Photo result request codes distinguish which image is being edited. */
 class EditProfileActivity : AppCompatActivity() {
     private val fields = listOf(R.id.etName to "name", R.id.etUsername to "username", R.id.etWebsite to "website", R.id.etBio to "bio", R.id.etEmail to "email", R.id.etPhone to "phone", R.id.etGender to "gender")
     private var avatar = -1

@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-/** Bundled listings and locally saved listings share working filters and detail/message actions. */
+/** Local two-column marketplace. Category/location filters affect displayed cards; new listings and saved choices use preferences and seller messaging opens Chat. */
 class MarketplaceActivity : AppCompatActivity() {
     private val names=listOf("Road bike, 21-speed","Rattan armchair","Solid wood study desk","Ceramic plant pots, set of 3")
     private val prices=listOf("Rs 45,000","Rs 8,500","Rs 15,000","Rs 3,200")

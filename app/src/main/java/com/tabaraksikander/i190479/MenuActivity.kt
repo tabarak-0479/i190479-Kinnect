@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-/** All reference shortcuts and expandable rows have meaningful local destinations/state. */
+/** Reference shortcuts route to Activities or local dialogs when no destination screen is supplied. Logout starts a fresh Login task and clears history. */
 class MenuActivity : AppCompatActivity() {
     override fun onCreate(state:Bundle?){
         super.onCreate(state);setContentView(R.layout.activity_menu);Ui.prepare(this)

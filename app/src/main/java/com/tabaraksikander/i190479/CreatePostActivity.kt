@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-/** XML screen with ordinary click listeners and explicit Activity Intents. */
+/** Compose a local post. Gallery results supply actual image IDs; publishing saves the text and IDs so Home can display the same attachments. */
 class CreatePostActivity : AppCompatActivity() {
     private var selectedPhotos = intArrayOf()
     override fun onCreate(savedInstanceState: Bundle?) {

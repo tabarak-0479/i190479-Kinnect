@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-/** Public profile reads all saved name, bio, avatar and cover changes on return. */
+/** Public profile reads saved name, bio and photo IDs when resumed. Private fields remain in EditProfile; tabs and friend tiles use basic listeners. */
 class ProfileActivity : AppCompatActivity() {
     override fun onCreate(state: Bundle?) {
         super.onCreate(state); setContentView(R.layout.activity_profile); Ui.prepare(this)

@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-/** Reads the actual shared caption, selected image, audience and decorations. */
+/** Read the last shared story and show its caption, image and audience. Highlight and Send update local state rather than contacting a service. */
 class YourStoryActivity : AppCompatActivity() {
     override fun onCreate(state:Bundle?) {
         super.onCreate(state);setContentView(R.layout.activity_your_story);Ui.prepare(this)

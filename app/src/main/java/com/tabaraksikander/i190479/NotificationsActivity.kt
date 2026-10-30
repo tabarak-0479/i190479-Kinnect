@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-/** Grouped notifications support read/hide and real request confirmation. */
+/** Grouped local notifications with styled XML text and overlapping badges. Row/overflow actions update read/request state or open the specified Activity. */
 class NotificationsActivity : AppCompatActivity() {
     private val ids=intArrayOf(R.id.notice0,R.id.notice1,R.id.notice2,R.id.notice3,R.id.notice4,R.id.notice5)
     override fun onCreate(state:Bundle?){

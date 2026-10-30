@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-/** A local call demonstration. It never requests phone or microphone permissions. */
+/** Local call UI only: Chronometer displays elapsed time and buttons change local states. No phone/microphone permission or actual call is requested. */
 class VoiceCallActivity : AppCompatActivity() {
     override fun onCreate(state:Bundle?) {
         super.onCreate(state);setContentView(R.layout.activity_voice_call);Ui.prepare(this)

@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
+/** Local demonstration login. Explicit Intent flags remove authentication screens after entering Home; the recent account uses the same action. */
 class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

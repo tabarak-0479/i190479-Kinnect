@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-/** Thread actions and newly posted replies work locally and survive reopening. */
+/** Threaded reference comments stay in XML. New replies are appended as TextViews and stored locally; the current reply target is shown above the composer. */
 class CommentsActivity : AppCompatActivity() {
     private var replyTo="Aisha Khan"
     private val prefs by lazy {getSharedPreferences("demo",MODE_PRIVATE)}

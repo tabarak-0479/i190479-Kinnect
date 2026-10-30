@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-/** Text, sticker, theme and audience are retained with the shared story. */
+/** Edit a local story image/caption and decoration choices. Sharing keeps this Activity in history so Back from YourStory returns here. */
 class StoryEditorActivity : AppCompatActivity() {
     private var image=4
     override fun onCreate(state:Bundle?) {

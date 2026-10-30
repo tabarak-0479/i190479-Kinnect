@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-/** One XML reference screen receives a selected person's identity through Intent extras. */
+/** Render the person selected in Search/Friends instead of a fixed profile. Pass the same name into Chat to preserve conversation identity. */
 class OtherProfileActivity : AppCompatActivity() {
     override fun onCreate(state: Bundle?) {
         super.onCreate(state);setContentView(R.layout.activity_other_profile);Ui.prepare(this)

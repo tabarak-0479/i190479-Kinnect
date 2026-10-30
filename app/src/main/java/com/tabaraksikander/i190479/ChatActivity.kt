@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-/** New text and image messages are stored in order for each selected conversation. */
+/** Per-person local conversation. Ordered preference keys preserve text/photo messages; dynamic rows extend the XML reference conversation and the call Intent keeps the person. */
 class ChatActivity : AppCompatActivity() {
     private lateinit var person: String
     private val prefs by lazy { getSharedPreferences("demo",MODE_PRIVATE) }

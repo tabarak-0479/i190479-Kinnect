@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-/** XML screen with ordinary click listeners and explicit Activity Intents. */
+/** Feed entry points use ordinary Intents. onResume refreshes local reactions, profile/photo state and published attachments after returning from editors. */
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

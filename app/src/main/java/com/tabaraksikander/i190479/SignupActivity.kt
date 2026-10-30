@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
+/** Simple signup form with birthday widgets and local profile data. Photo IDs return through an Activity result; this creates no server account. */
 class SignupActivity : AppCompatActivity() {
     private var avatar=-1
 

@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-/** XML screen with ordinary click listeners and explicit Activity Intents. */
+/** Local conversations retain their own person keys and last-message preview. Search filters rows and each row passes its own name to Chat. */
 class ChatsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

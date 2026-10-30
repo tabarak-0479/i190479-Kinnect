@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-/** Local illustrated camera UI: controls change its actual preview state. */
+/** Illustrated camera demonstration with local flash/flip/effects. The shutter or chosen gallery image opens StoryEditor through an explicit Intent. */
 class CameraActivity : AppCompatActivity() {
     private var image=4
     override fun onCreate(state:Bundle?) {

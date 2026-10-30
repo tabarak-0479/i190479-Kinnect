@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-/** Returns selected image identities to the Activity that opened the picker. */
+/** Bundled local gallery. LinkedHashSet avoids duplicate selections and preserves order; Bundle restores selection across recreation and the result Intent returns IDs. */
 class PhotoPickerActivity : AppCompatActivity() {
     private val selected = linkedSetOf<Int>()
     private var multiple = true

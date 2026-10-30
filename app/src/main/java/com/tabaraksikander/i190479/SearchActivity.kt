@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-/** Local filtering and explicit person extras keep results tied to the selected person. */
+/** TextWatcher filters the local people list. Person extras preserve the identity of the tapped result; categories and recent searches are local. */
 class SearchActivity : AppCompatActivity() {
     private val names = listOf("Omar Farooq", "Omar Siddiqui", "Omar Tariq")
     private var category = 0

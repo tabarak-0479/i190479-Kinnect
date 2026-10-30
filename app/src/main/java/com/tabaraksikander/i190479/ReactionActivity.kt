@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-/** XML screen with ordinary click listeners and explicit Activity Intents. */
+/** A native XML overlay selects one of six local reactions, saves it and finishes to the feed. The scrim dismisses the picker. */
 class ReactionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-/** Request actions persist locally; every avatar/name opens the correct person. */
+/** Local friend-request rows map to distinct people. Confirm/delete state is stored and See all expands the remaining requests. */
 class FriendsActivity : AppCompatActivity() {
     private val names=listOf("Sara Iqbal","Bilal Ahmed","Noor Fatima","Daniyal Shah","Omar Siddiqui","Omar Tariq","Maya Chen","Zain Raza","Hamza Ali","Amina Noor","Usman Ali","Sana Nadeem")
     private val rows=intArrayOf(R.id.request0,R.id.request1,R.id.request2,R.id.request3,R.id.request4,R.id.request5,R.id.request6,R.id.request7,R.id.request8,R.id.request9,R.id.request10,R.id.request11)
