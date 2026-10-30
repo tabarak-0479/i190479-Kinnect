@@ -11,7 +11,7 @@ class VoiceCallActivity : AppCompatActivity() {
     override fun onCreate(state:Bundle?) {
         super.onCreate(state);setContentView(R.layout.activity_voice_call);Ui.prepare(this)
         val person=intent.getStringExtra("person") ?: "Ammi"
-        findViewById<TextView>(R.id.callName).text=person;findViewById<TextView>(R.id.callAvatar).text=Ui.initials(person)
+        findViewById<TextView>(R.id.callName).text=person;findViewById<TextView>(R.id.callAvatar).text=if(person=="Ammi")"AM" else Ui.initials(person)
         findViewById<Chronometer>(R.id.callDuration).apply {base=state?.getLong("base") ?: (android.os.SystemClock.elapsedRealtime()-192000L);start()}
         findViewById<View>(R.id.btnEndCall).setOnClickListener {finish()}
         for((id,label)in listOf(R.id.btnMute to "Microphone muted",R.id.btnSpeaker to "Speaker on"))findViewById<ImageButton>(id).setOnClickListener {

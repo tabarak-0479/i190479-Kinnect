@@ -8,9 +8,9 @@
   <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:fillViewport="true" android:layout_weight="1" android:id="@+id/commentsScroll">
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
       <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:baselineAligned="false">
-        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/reaction_like" android:contentDescription="" android:importantForAccessibility="no" />
-        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/reaction_love_icon" android:contentDescription="" android:importantForAccessibility="no" />
-        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/reaction_haha" android:contentDescription="" android:importantForAccessibility="no" />
+        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/reaction_like" android:importantForAccessibility="no" />
+        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/reaction_love_icon" android:importantForAccessibility="no" />
+        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/reaction_haha" android:importantForAccessibility="no" />
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ui_1_2k" android:textSize="16sp" android:textColor="#252722" android:textStyle="bold" android:paddingStart="8dp" />
       </LinearLayout>
       <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8" />
@@ -23,7 +23,7 @@
               <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ui_that_sky_is_unreal_which_part_of_the_beach_wa" android:textSize="16sp" android:textColor="#252722" />
             </LinearLayout>
             <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:background="@drawable/reaction_pill" android:padding="4dp" android:layout_gravity="bottom|end" android:translationY="10dp" android:elevation="2dp" android:baselineAligned="false">
-              <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/reaction_love_icon" android:contentDescription="" android:importantForAccessibility="no" />
+              <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/reaction_love_icon" android:importantForAccessibility="no" />
               <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ui_24" android:textSize="12sp" android:textColor="#252722" android:paddingStart="4dp" />
             </LinearLayout>
           </FrameLayout>
@@ -35,7 +35,7 @@
         </LinearLayout>
       </LinearLayout>
       <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:clipChildren="false">
-        <ImageView android:layout_width="32dp" android:layout_height="match_parent" android:src="@drawable/reply_connector" android:contentDescription="" android:importantForAccessibility="no" android:layout_marginStart="32dp" />
+        <ImageView android:layout_width="32dp" android:layout_height="match_parent" android:src="@drawable/reply_connector" android:importantForAccessibility="no" android:layout_marginStart="32dp" />
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingStart="60dp" android:paddingEnd="16dp" android:paddingTop="12dp" android:clipChildren="false" android:baselineAligned="false">
           <TextView android:layout_width="32dp" android:layout_height="32dp" android:text="@string/ui_lm" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_purple" android:gravity="center" android:textStyle="bold" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="6sp" app:autoSizeMaxTextSize="18sp" app:autoSizeStepGranularity="1sp" />
           <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_marginStart="8dp">
@@ -45,7 +45,7 @@
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ui_near_the_old_pier_right_before_the_rain_start" android:textSize="16sp" android:textColor="#252722" />
               </LinearLayout>
               <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:background="@drawable/reaction_pill" android:padding="4dp" android:layout_gravity="bottom|end" android:translationY="10dp" android:elevation="2dp" android:baselineAligned="false">
-                <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/reaction_haha" android:contentDescription="" android:importantForAccessibility="no" />
+                <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/reaction_haha" android:importantForAccessibility="no" />
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ui_3" android:textSize="12sp" android:textColor="#252722" android:paddingStart="4dp" />
               </LinearLayout>
             </FrameLayout>
@@ -58,7 +58,7 @@
         </LinearLayout>
       </FrameLayout>
       <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:clipChildren="false">
-        <ImageView android:layout_width="32dp" android:layout_height="match_parent" android:src="@drawable/reply_connector" android:contentDescription="" android:importantForAccessibility="no" android:layout_marginStart="32dp" />
+        <ImageView android:layout_width="32dp" android:layout_height="match_parent" android:src="@drawable/reply_connector" android:importantForAccessibility="no" android:layout_marginStart="32dp" />
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingStart="60dp" android:paddingEnd="16dp" android:paddingTop="12dp" android:clipChildren="false" android:baselineAligned="false">
           <TextView android:layout_width="32dp" android:layout_height="32dp" android:text="@string/ui_zr" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_blue" android:gravity="center" android:textStyle="bold" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="6sp" app:autoSizeMaxTextSize="18sp" app:autoSizeStepGranularity="1sp" />
           <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_marginStart="8dp">

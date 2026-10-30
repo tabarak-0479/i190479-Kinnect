@@ -81,6 +81,7 @@ object Ui {
         val gender = root.findViewById<android.widget.RadioGroup>(R.id.genderGroup)
         gender?.let { group ->
             group.orientation = android.widget.LinearLayout.VERTICAL
+            group.layoutParams = group.layoutParams.apply { height = android.view.ViewGroup.LayoutParams.WRAP_CONTENT }
             for (i in 0 until group.childCount) {
                 val child = group.getChildAt(i)
                 if (child is android.widget.RadioButton) child.layoutParams = android.widget.RadioGroup.LayoutParams(-1, -2).apply { bottomMargin = dp(context, 8) }
@@ -88,6 +89,19 @@ object Ui {
             }
         }
         fun visit(view: View) {
+            if (view is android.widget.LinearLayout && view.orientation == android.widget.LinearLayout.HORIZONTAL) {
+                val children = (0 until view.childCount).map { view.getChildAt(it) }
+                val labeledFields = children.filterIsInstance<android.widget.FrameLayout>().count { frame ->
+                    (0 until frame.childCount).any { frame.getChildAt(it) is android.widget.EditText || frame.getChildAt(it) is android.widget.Spinner }
+                }
+                if (labeledFields > 1) {
+                    view.orientation = android.widget.LinearLayout.VERTICAL
+                    for (child in children) {
+                        if (child is android.widget.Space) child.visibility = View.GONE
+                        else child.layoutParams = android.widget.LinearLayout.LayoutParams(-1, dp(context, 80)).apply { bottomMargin = dp(context, 8) }
+                    }
+                }
+            }
             if (view is android.widget.FrameLayout) {
                 val children = (0 until view.childCount).map { view.getChildAt(it) }
                 val field = children.filterIsInstance<android.widget.EditText>().firstOrNull()
@@ -95,8 +109,18 @@ object Ui {
                 val caption = children.any { it is TextView && it !is android.widget.EditText && it.text.isNotBlank() }
                 if (caption && (field != null || spinner != null)) {
                     view.layoutParams?.let { it.height = dp(context, 80); view.layoutParams = it }
+                    children.filterIsInstance<TextView>().filter { it !is android.widget.EditText }.forEach {
+                        it.layoutParams = it.layoutParams.apply { height = android.view.ViewGroup.LayoutParams.WRAP_CONTENT }
+                    }
                     field?.setPadding(field.paddingLeft, dp(context, 32), field.paddingRight, dp(context, 4))
                     spinner?.setPadding(spinner.paddingLeft, dp(context, 30), spinner.paddingRight, spinner.paddingBottom)
+                }
+            }
+            if (view is TextView && view !is android.widget.EditText) {
+                if (view.id in intArrayOf(R.id.commentLike0, R.id.commentLike1, R.id.commentLike2, R.id.commentLike3, R.id.commentLike4,
+                        R.id.commentReply0, R.id.commentReply1, R.id.commentReply2, R.id.commentReply3, R.id.commentReply4, R.id.btnCancelReply)) {
+                    view.layoutParams = view.layoutParams.apply { width = android.view.ViewGroup.LayoutParams.WRAP_CONTENT }
+                    view.setPadding(dp(context, 12), view.paddingTop, dp(context, 12), view.paddingBottom)
                 }
             }
             if (view is android.view.ViewGroup) for (i in 0 until view.childCount) visit(view.getChildAt(i))

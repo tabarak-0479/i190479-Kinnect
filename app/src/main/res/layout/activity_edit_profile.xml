@@ -28,28 +28,28 @@
         <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8" />
         <Space android:layout_width="match_parent" android:layout_height="12dp" />
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="4dp" android:baselineAligned="false">
-          <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="@string/ui_name" android:textSize="16sp" android:textColor="#252722" android:labelFor="@id/etName" />
+          <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="@string/ui_name" android:textSize="16sp" android:textColor="#252722" />
           <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
             <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/etName" android:hint="@string/ui_name" android:text="@string/ui_jacob_west" android:textSize="15sp" android:textColor="#252722" android:textColorHint="#70736D" android:paddingHorizontal="12dp" android:background="@android:color/transparent" android:inputType="textPersonName" android:minHeight="48dp" android:paddingVertical="8dp" android:importantForAutofill="no" />
             <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8" />
           </LinearLayout>
         </LinearLayout>
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="4dp" android:baselineAligned="false">
-          <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="@string/ui_username" android:textSize="16sp" android:textColor="#252722" android:labelFor="@id/etUsername" />
+          <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="@string/ui_username" android:textSize="16sp" android:textColor="#252722" />
           <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
             <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/etUsername" android:hint="@string/ui_username" android:text="@string/ui_jacob_west_d5eae3" android:textSize="15sp" android:textColor="#252722" android:textColorHint="#70736D" android:paddingHorizontal="12dp" android:background="@android:color/transparent" android:inputType="text" android:minHeight="48dp" android:paddingVertical="8dp" android:importantForAutofill="no" />
             <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8" />
           </LinearLayout>
         </LinearLayout>
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="4dp" android:baselineAligned="false">
-          <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="@string/ui_website" android:textSize="16sp" android:textColor="#252722" android:labelFor="@id/etWebsite" />
+          <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="@string/ui_website" android:textSize="16sp" android:textColor="#252722" />
           <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
             <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/etWebsite" android:hint="@string/ui_website" android:text="" android:textSize="15sp" android:textColor="#252722" android:textColorHint="#70736D" android:paddingHorizontal="12dp" android:background="@android:color/transparent" android:inputType="textUri" android:minHeight="48dp" android:paddingVertical="8dp" android:importantForAutofill="no" />
             <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8" />
           </LinearLayout>
         </LinearLayout>
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="4dp" android:baselineAligned="false">
-          <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="@string/ui_bio" android:textSize="16sp" android:textColor="#252722" android:labelFor="@id/etBio" />
+          <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="@string/ui_bio" android:textSize="16sp" android:textColor="#252722" />
           <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
             <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/etBio" android:hint="@string/ui_bio" android:text="@string/ui_digital_goodies_designer" android:textSize="15sp" android:textColor="#252722" android:textColorHint="#70736D" android:paddingHorizontal="12dp" android:background="@android:color/transparent" android:inputType="textCapSentences|textMultiLine" android:minHeight="48dp" android:paddingVertical="8dp" android:importantForAutofill="no" />
             <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8" />
@@ -58,21 +58,21 @@
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ui_switch_to_professional_mode" android:textSize="14sp" android:textColor="#0B5F63" android:textStyle="bold" android:paddingVertical="16dp" />
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ui_private_information" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" android:padding="16dp" />
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="4dp" android:baselineAligned="false">
-          <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="@string/ui_email" android:textSize="16sp" android:textColor="#252722" android:labelFor="@id/etEmail" />
+          <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="@string/ui_email" android:textSize="16sp" android:textColor="#252722" />
           <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
             <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/etEmail" android:hint="@string/ui_email" android:text="@string/ui_jacob_west_mail_com" android:textSize="15sp" android:textColor="#252722" android:textColorHint="#70736D" android:paddingHorizontal="12dp" android:background="@android:color/transparent" android:inputType="textEmailAddress" android:minHeight="48dp" android:paddingVertical="8dp" android:importantForAutofill="no" />
             <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8" />
           </LinearLayout>
         </LinearLayout>
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="4dp" android:baselineAligned="false">
-          <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="@string/ui_phone" android:textSize="16sp" android:textColor="#252722" android:labelFor="@id/etPhone" />
+          <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="@string/ui_phone" android:textSize="16sp" android:textColor="#252722" />
           <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
             <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/etPhone" android:hint="@string/ui_phone" android:text="@string/ui_92_300_1234567" android:textSize="15sp" android:textColor="#252722" android:textColorHint="#70736D" android:paddingHorizontal="12dp" android:background="@android:color/transparent" android:inputType="phone" android:minHeight="48dp" android:paddingVertical="8dp" android:importantForAutofill="no" />
             <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8" />
           </LinearLayout>
         </LinearLayout>
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="4dp" android:baselineAligned="false">
-          <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="@string/ui_gender" android:textSize="16sp" android:textColor="#252722" android:labelFor="@id/etGender" />
+          <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="@string/ui_gender" android:textSize="16sp" android:textColor="#252722" />
           <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
             <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/etGender" android:hint="@string/ui_gender" android:text="@string/ui_male" android:textSize="15sp" android:textColor="#252722" android:textColorHint="#70736D" android:paddingHorizontal="12dp" android:background="@android:color/transparent" android:inputType="text" android:minHeight="48dp" android:paddingVertical="8dp" android:importantForAutofill="no" />
             <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8" />

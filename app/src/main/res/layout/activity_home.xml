@@ -6,7 +6,7 @@
         <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnSearch" android:src="@drawable/ic_search" android:background="@drawable/pale" android:padding="12dp" android:contentDescription="@string/ui_search" app:tint="#0B5F63" />
         <FrameLayout android:layout_width="48dp" android:layout_height="48dp">
           <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnChats" android:src="@drawable/ic_chat" android:background="@drawable/pale" android:padding="12dp" android:contentDescription="@string/ui_chat" app:tint="#0B5F63" />
-          <TextView android:layout_width="16dp" android:layout_height="16dp" android:text="@string/ui_3" android:textSize="10sp" android:textColor="#FFFFFF" android:gravity="center" android:background="@drawable/circle_red" android:layout_gravity="top|end" android:contentDescription="@string/ui_3_unread_chats" android:id="@+id/chatBadge" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="6sp" app:autoSizeMaxTextSize="10sp" app:autoSizeStepGranularity="1sp" />
+          <TextView android:layout_width="16dp" android:layout_height="16dp" android:text="@string/ui_3" android:textSize="10sp" android:textColor="#FFFFFF" android:gravity="center" android:background="@drawable/circle_badge" android:layout_gravity="top|end" android:contentDescription="@string/ui_3_unread_chats" android:id="@+id/chatBadge" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="6sp" app:autoSizeMaxTextSize="10sp" app:autoSizeStepGranularity="1sp" />
         </FrameLayout>
       </LinearLayout>
       <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:baselineAligned="false">
@@ -25,7 +25,7 @@
         <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
           <FrameLayout android:layout_width="match_parent" android:layout_height="48dp">
             <ImageButton android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/navNotifications" android:src="@drawable/ic_notifications" android:background="@android:color/transparent" android:padding="12dp" android:contentDescription="@string/ui_notifications" app:tint="#62655F" />
-            <TextView android:layout_width="16dp" android:layout_height="16dp" android:text="@string/ui_5" android:textSize="10sp" android:textColor="#FFFFFF" android:gravity="center" android:background="@drawable/circle_red" android:layout_gravity="top|end" android:layout_marginEnd="16dp" android:contentDescription="@string/ui_5_unread_notifications" android:id="@+id/navBadge" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="6sp" app:autoSizeMaxTextSize="10sp" app:autoSizeStepGranularity="1sp" />
+            <TextView android:layout_width="16dp" android:layout_height="16dp" android:text="@string/ui_5" android:textSize="10sp" android:textColor="#FFFFFF" android:gravity="center" android:background="@drawable/circle_badge" android:layout_gravity="top|end" android:layout_marginEnd="16dp" android:contentDescription="@string/ui_5_unread_notifications" android:id="@+id/navBadge" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="6sp" app:autoSizeMaxTextSize="10sp" app:autoSizeStepGranularity="1sp" />
           </FrameLayout>
           <View android:layout_width="match_parent" android:layout_height="3dp" android:background="#FFFFFF" />
         </LinearLayout>
@@ -106,9 +106,9 @@
         </LinearLayout>
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="12dp" android:baselineAligned="false">
           <FrameLayout android:layout_width="48dp" android:layout_height="20dp">
-            <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/reaction_like" android:contentDescription="" android:importantForAccessibility="no" />
-            <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/reaction_love_icon" android:contentDescription="" android:importantForAccessibility="no" android:layout_marginStart="14dp" />
-            <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/reaction_haha" android:contentDescription="" android:importantForAccessibility="no" android:layout_marginStart="28dp" />
+            <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/reaction_like" android:importantForAccessibility="no" />
+            <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/reaction_love_icon" android:importantForAccessibility="no" android:layout_marginStart="14dp" />
+            <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/reaction_haha" android:importantForAccessibility="no" android:layout_marginStart="28dp" />
           </FrameLayout>
           <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/ui_aisha_and_1_2k_others" android:textSize="13sp" android:textColor="#252722" android:layout_weight="1" android:paddingStart="4dp" />
           <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ui_86_comments_12_shares" android:textSize="13sp" android:textColor="#252722" />
@@ -116,15 +116,15 @@
         <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8" />
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:baselineAligned="false">
           <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="horizontal" android:gravity="center" android:id="@+id/btnLike" android:clickable="true" android:focusable="true" android:contentDescription="@string/ui_like" android:minHeight="48dp" android:baselineAligned="false">
-            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_like" android:contentDescription="" android:importantForAccessibility="no" android:id="@+id/btnLikeIcon" app:tint="#62655F" />
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_like" android:importantForAccessibility="no" android:id="@+id/btnLikeIcon" app:tint="#62655F" />
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ui_like" android:textSize="14sp" android:textColor="#252722" android:paddingStart="6dp" android:id="@+id/btnLikeLabel" />
           </LinearLayout>
           <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="horizontal" android:gravity="center" android:id="@+id/btnComments" android:clickable="true" android:focusable="true" android:contentDescription="@string/ui_comment" android:minHeight="48dp" android:baselineAligned="false">
-            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_comment" android:contentDescription="" android:importantForAccessibility="no" android:id="@+id/btnCommentsIcon" app:tint="#62655F" />
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_comment" android:importantForAccessibility="no" android:id="@+id/btnCommentsIcon" app:tint="#62655F" />
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ui_comment" android:textSize="14sp" android:textColor="#252722" android:paddingStart="6dp" android:id="@+id/btnCommentsLabel" />
           </LinearLayout>
           <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="horizontal" android:gravity="center" android:id="@+id/btnShare" android:clickable="true" android:focusable="true" android:contentDescription="@string/ui_share" android:minHeight="48dp" android:baselineAligned="false">
-            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_share" android:contentDescription="" android:importantForAccessibility="no" android:id="@+id/btnShareIcon" app:tint="#62655F" />
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_share" android:importantForAccessibility="no" android:id="@+id/btnShareIcon" app:tint="#62655F" />
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ui_share" android:textSize="14sp" android:textColor="#252722" android:paddingStart="6dp" android:id="@+id/btnShareLabel" />
           </LinearLayout>
         </LinearLayout>

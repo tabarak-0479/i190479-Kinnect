@@ -12,6 +12,11 @@ class ReactionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reaction)
         Ui.prepare(this)
+        findViewById<View>(R.id.btnShare).setOnClickListener {
+            val clipboard=getSystemService(CLIPBOARD_SERVICE) as android.content.ClipboardManager
+            clipboard.setPrimaryClip(android.content.ClipData.newPlainText("Kinnect post", "Lina Marsh: Sunset walk with the crew. Worth every grain of sand in my shoes."))
+            Toast.makeText(this, "Post text copied", Toast.LENGTH_SHORT).show()
+        }
         findViewById<View>(R.id.reactionScrim).setOnClickListener {finish()}
         findViewById<View>(R.id.btnComments).setOnClickListener { startActivity(Intent(this, CommentsActivity::class.java)) }
         findViewById<View>(R.id.reaction0).setOnClickListener { getSharedPreferences("demo", MODE_PRIVATE).edit().putString("reaction", "Like").apply(); finish() }

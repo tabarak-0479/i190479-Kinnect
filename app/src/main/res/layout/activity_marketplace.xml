@@ -2,7 +2,7 @@
   <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingHorizontal="16dp" android:minHeight="56dp" android:baselineAligned="false">
     <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/ui_marketplace" android:textSize="25sp" android:textColor="#252722" android:layout_weight="1" android:textStyle="bold" />
     <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnMarketplaceProfile" android:src="@drawable/ic_person" android:background="@android:color/transparent" android:padding="12dp" android:contentDescription="@string/ui_person" android:backgroundTint="#ECEBE6" app:tint="#0B5F63" />
-    <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnSearch" android:src="@drawable/ic_search" android:background="@android:color/transparent" android:padding="12dp" android:contentDescription="@string/ui_search" android:backgroundTint="#ECEBE6" app:tint="#0B5F63" />
+    <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnSearch" android:src="@drawable/ic_search" android:background="@drawable/pale" android:padding="12dp" android:contentDescription="@string/ui_search" android:backgroundTint="#ECEBE6" app:tint="#0B5F63" />
   </LinearLayout>
   <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:baselineAligned="false">
     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
@@ -18,7 +18,7 @@
       <View android:layout_width="match_parent" android:layout_height="3dp" android:background="#0B5F63" />
     </LinearLayout>
     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
-      <ImageButton android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/navNotifications" android:src="@drawable/ic_notifications" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="@string/ui_notifications" app:tint="#62655F" />
+      <FrameLayout android:layout_width="match_parent" android:layout_height="48dp"><ImageButton android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/navNotifications" android:src="@drawable/ic_notifications" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="@string/ui_notifications" app:tint="#62655F" /><TextView android:id="@+id/navBadge" android:layout_width="18dp" android:layout_height="18dp" android:layout_gravity="top|end" android:layout_marginEnd="12dp" android:text="@string/ui_5" android:textSize="11sp" android:textColor="#FFFFFF" android:textStyle="bold" android:gravity="center" android:background="@drawable/circle_badge" android:contentDescription="@string/ui_5_unread_notifications" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="6sp" app:autoSizeMaxTextSize="11sp" /></FrameLayout>
       <View android:layout_width="match_parent" android:layout_height="3dp" android:background="#FFFFFF" />
     </LinearLayout>
     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
