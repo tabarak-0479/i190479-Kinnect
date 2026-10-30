@@ -1,83 +1,118 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#FFFFFF">
-  <LinearLayout android:layout_width="match_parent" android:layout_height="56dp" android:orientation="horizontal" android:gravity="center_vertical" android:paddingEnd="12dp">
-    <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnBack" android:src="@drawable/ic_back" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Back" app:tint="#0B5F63" />
-    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="Chats" android:textSize="20sp" android:textColor="#252722" android:layout_weight="1" android:textStyle="bold" />
-    <TextView android:layout_width="wrap_content" android:layout_height="48dp" android:text="✎" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnNewChat" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:paddingHorizontal="14dp" />
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingEnd="12dp" android:minHeight="56dp" android:baselineAligned="false">
+    <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnBack" android:src="@drawable/ic_back" android:background="@android:color/transparent" android:padding="12dp" android:contentDescription="@string/ui_back" app:tint="#0B5F63" />
+    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/ui_chats" android:textSize="26sp" android:textColor="#252722" android:layout_weight="1" android:textStyle="bold" />
+    <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnNewChat" android:src="@drawable/ic_edit" android:background="@drawable/pill_pale" android:padding="12dp" android:contentDescription="@string/ui_edit" app:tint="#0B5F63" />
   </LinearLayout>
-  <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8" />
-  <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:fillViewport="true" android:layout_weight="1">
+  <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:fillViewport="true" android:layout_weight="1" android:id="@+id/chatListScroll">
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
-      <EditText android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/etChatSearch" android:hint="Search" android:text="" android:textSize="15sp" android:textColor="#252722" android:textColorHint="#70736D" android:paddingHorizontal="12dp" android:background="@drawable/button_pale" android:inputType="text" android:layout_margin="16dp" />
-      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp">
-        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:gravity="center">
-          <TextView android:layout_width="48dp" android:layout_height="48dp" android:text="+" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_teal" android:gravity="center" android:textStyle="bold" />
-          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Your note" android:textSize="12sp" android:textColor="#252722" android:paddingTop="4dp" />
+      <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/etChatSearch" android:hint="@string/ui_search" android:text="" android:textSize="15sp" android:textColor="#252722" android:textColorHint="#70736D" android:paddingHorizontal="12dp" android:background="@drawable/button_pale" android:inputType="text" android:layout_margin="16dp" android:minHeight="48dp" android:paddingVertical="8dp" android:importantForAutofill="no" />
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:baselineAligned="false">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:gravity="center" android:id="@+id/chatNote0" android:clickable="true" android:focusable="true" android:contentDescription="@string/ui_your_note">
+          <FrameLayout android:layout_width="56dp" android:layout_height="56dp">
+            <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="@string/ui_symbol_a979ef" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_teal" android:gravity="center" android:textStyle="bold" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="6sp" app:autoSizeMaxTextSize="18sp" app:autoSizeStepGranularity="1sp" />
+            <View android:layout_width="12dp" android:layout_height="12dp" android:background="@drawable/online_dot" android:layout_gravity="bottom|end" />
+          </FrameLayout>
+          <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ui_your_note" android:textSize="12sp" android:textColor="#252722" android:gravity="center" android:paddingTop="6dp" />
         </LinearLayout>
-        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:gravity="center">
-          <TextView android:layout_width="48dp" android:layout_height="48dp" android:text="AK" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_red" android:gravity="center" android:textStyle="bold" />
-          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aisha" android:textSize="12sp" android:textColor="#252722" android:paddingTop="4dp" />
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:gravity="center" android:id="@+id/chatNote1" android:clickable="true" android:focusable="true" android:contentDescription="@string/ui_aisha">
+          <FrameLayout android:layout_width="56dp" android:layout_height="56dp">
+            <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="@string/ui_ak" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_red" android:gravity="center" android:textStyle="bold" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="6sp" app:autoSizeMaxTextSize="18sp" app:autoSizeStepGranularity="1sp" />
+            <View android:layout_width="12dp" android:layout_height="12dp" android:background="@drawable/online_dot" android:layout_gravity="bottom|end" />
+          </FrameLayout>
+          <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ui_aisha" android:textSize="12sp" android:textColor="#252722" android:gravity="center" android:paddingTop="6dp" />
         </LinearLayout>
-        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:gravity="center">
-          <TextView android:layout_width="48dp" android:layout_height="48dp" android:text="OF" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_green" android:gravity="center" android:textStyle="bold" />
-          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Omar" android:textSize="12sp" android:textColor="#252722" android:paddingTop="4dp" />
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:gravity="center" android:id="@+id/chatNote2" android:clickable="true" android:focusable="true" android:contentDescription="@string/ui_omar">
+          <FrameLayout android:layout_width="56dp" android:layout_height="56dp">
+            <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="@string/ui_of" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_green" android:gravity="center" android:textStyle="bold" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="6sp" app:autoSizeMaxTextSize="18sp" app:autoSizeStepGranularity="1sp" />
+            <View android:layout_width="12dp" android:layout_height="12dp" android:background="@drawable/online_dot" android:layout_gravity="bottom|end" />
+          </FrameLayout>
+          <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ui_omar" android:textSize="12sp" android:textColor="#252722" android:gravity="center" android:paddingTop="6dp" />
         </LinearLayout>
-        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:gravity="center">
-          <TextView android:layout_width="48dp" android:layout_height="48dp" android:text="SI" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_blue" android:gravity="center" android:textStyle="bold" />
-          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sara" android:textSize="12sp" android:textColor="#252722" android:paddingTop="4dp" />
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:gravity="center" android:id="@+id/chatNote3" android:clickable="true" android:focusable="true" android:contentDescription="@string/ui_sara">
+          <FrameLayout android:layout_width="56dp" android:layout_height="56dp">
+            <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="@string/ui_si" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_blue" android:gravity="center" android:textStyle="bold" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="6sp" app:autoSizeMaxTextSize="18sp" app:autoSizeStepGranularity="1sp" />
+            <View android:layout_width="12dp" android:layout_height="12dp" android:background="@drawable/online_dot" android:layout_gravity="bottom|end" />
+          </FrameLayout>
+          <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ui_sara" android:textSize="12sp" android:textColor="#252722" android:gravity="center" android:paddingTop="6dp" />
         </LinearLayout>
-        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:gravity="center">
-          <TextView android:layout_width="48dp" android:layout_height="48dp" android:text="HA" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_gold" android:gravity="center" android:textStyle="bold" />
-          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hamza" android:textSize="12sp" android:textColor="#252722" android:paddingTop="4dp" />
-        </LinearLayout>
-      </LinearLayout>
-      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/chatRow0" android:clickable="true" android:focusable="true">
-        <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="AK" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_red" android:gravity="center" android:textStyle="bold" />
-        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="12dp">
-          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aisha Khan" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" />
-          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sending the photos tonight · 2m" android:textSize="13sp" android:textColor="#252722" android:paddingTop="4dp" />
-        </LinearLayout>
-      </LinearLayout>
-      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/chatRow1" android:clickable="true" android:focusable="true">
-        <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="ZR" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_blue" android:gravity="center" android:textStyle="bold" />
-        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="12dp">
-          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Design crew" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" />
-          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Maya: the new mockups look clean · 15m" android:textSize="13sp" android:textColor="#252722" android:paddingTop="4dp" />
-        </LinearLayout>
-      </LinearLayout>
-      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/chatRow2" android:clickable="true" android:focusable="true">
-        <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="LM" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_purple" android:gravity="center" android:textStyle="bold" />
-        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="12dp">
-          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lina Marsh" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" />
-          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="You: See you at the pier · 1h" android:textSize="13sp" android:textColor="#252722" android:paddingTop="4dp" />
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:gravity="center" android:id="@+id/chatNote4" android:clickable="true" android:focusable="true" android:contentDescription="@string/ui_hamza">
+          <FrameLayout android:layout_width="56dp" android:layout_height="56dp">
+            <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="@string/ui_ha" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_gold" android:gravity="center" android:textStyle="bold" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="6sp" app:autoSizeMaxTextSize="18sp" app:autoSizeStepGranularity="1sp" />
+            <View android:layout_width="12dp" android:layout_height="12dp" android:background="@drawable/online_dot" android:layout_gravity="bottom|end" />
+          </FrameLayout>
+          <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ui_hamza" android:textSize="12sp" android:textColor="#252722" android:gravity="center" android:paddingTop="6dp" />
         </LinearLayout>
       </LinearLayout>
-      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/chatRow3" android:clickable="true" android:focusable="true">
-        <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="OF" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_green" android:gravity="center" android:textStyle="bold" />
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingHorizontal="16dp" android:paddingVertical="12dp" android:id="@+id/chatRow0" android:clickable="true" android:focusable="true" android:contentDescription="@string/ui_chat_with_aisha_khan" android:baselineAligned="false">
+        <FrameLayout android:layout_width="56dp" android:layout_height="56dp">
+          <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="@string/ui_ak" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_red" android:gravity="center" android:textStyle="bold" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="6sp" app:autoSizeMaxTextSize="18sp" app:autoSizeStepGranularity="1sp" />
+          <View android:layout_width="12dp" android:layout_height="12dp" android:background="@drawable/online_dot" android:layout_gravity="bottom|end" />
+        </FrameLayout>
         <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="12dp">
-          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Omar Farooq" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" />
-          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Haha that story was wild · 3h" android:textSize="13sp" android:textColor="#252722" android:paddingTop="4dp" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ui_aisha_khan" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ui_sending_the_photos_tonight_2m" android:textSize="14sp" android:textColor="#252722" android:paddingTop="4dp" android:id="@+id/chatRowPreview0" />
+        </LinearLayout>
+        <View android:layout_width="10dp" android:layout_height="10dp" android:background="@drawable/circle_teal" />
+      </LinearLayout>
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingHorizontal="16dp" android:paddingVertical="12dp" android:id="@+id/chatRow1" android:clickable="true" android:focusable="true" android:contentDescription="@string/ui_chat_with_design_crew" android:baselineAligned="false">
+        <FrameLayout android:layout_width="56dp" android:layout_height="56dp">
+          <TextView android:layout_width="38dp" android:layout_height="38dp" android:text="@string/ui_mc" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_gold" android:gravity="center" android:textStyle="bold" android:layout_gravity="top|end" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="6sp" app:autoSizeMaxTextSize="18sp" app:autoSizeStepGranularity="1sp" />
+          <TextView android:layout_width="38dp" android:layout_height="38dp" android:text="@string/ui_zr" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_blue" android:gravity="center" android:textStyle="bold" android:layout_gravity="bottom|start" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="6sp" app:autoSizeMaxTextSize="18sp" app:autoSizeStepGranularity="1sp" />
+        </FrameLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="12dp">
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ui_design_crew" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ui_maya_the_new_mockups_look_clean_15m" android:textSize="14sp" android:textColor="#252722" android:paddingTop="4dp" android:id="@+id/chatRowPreview1" />
+        </LinearLayout>
+        <View android:layout_width="10dp" android:layout_height="10dp" android:background="@drawable/circle_teal" />
+      </LinearLayout>
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingHorizontal="16dp" android:paddingVertical="12dp" android:id="@+id/chatRow2" android:clickable="true" android:focusable="true" android:contentDescription="@string/ui_chat_with_lina_marsh" android:baselineAligned="false">
+        <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="@string/ui_lm" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_purple" android:gravity="center" android:textStyle="bold" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="6sp" app:autoSizeMaxTextSize="18sp" app:autoSizeStepGranularity="1sp" />
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="12dp">
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ui_lina_marsh" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ui_you_see_you_at_the_pier_1h" android:textSize="14sp" android:textColor="#252722" android:paddingTop="4dp" android:id="@+id/chatRowPreview2" />
+        </LinearLayout>
+        <View android:layout_width="10dp" android:layout_height="10dp" android:background="@drawable/circle_teal" />
+      </LinearLayout>
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingHorizontal="16dp" android:paddingVertical="12dp" android:id="@+id/chatRow3" android:clickable="true" android:focusable="true" android:contentDescription="@string/ui_chat_with_omar_farooq" android:baselineAligned="false">
+        <FrameLayout android:layout_width="56dp" android:layout_height="56dp">
+          <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="@string/ui_of" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_green" android:gravity="center" android:textStyle="bold" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="6sp" app:autoSizeMaxTextSize="18sp" app:autoSizeStepGranularity="1sp" />
+          <View android:layout_width="12dp" android:layout_height="12dp" android:background="@drawable/online_dot" android:layout_gravity="bottom|end" />
+        </FrameLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="12dp">
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ui_omar_farooq" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ui_haha_that_story_was_wild_3h" android:textSize="14sp" android:textColor="#252722" android:paddingTop="4dp" android:id="@+id/chatRowPreview3" />
         </LinearLayout>
       </LinearLayout>
-      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/chatRow4" android:clickable="true" android:focusable="true">
-        <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="BA" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_purple" android:gravity="center" android:textStyle="bold" />
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingHorizontal="16dp" android:paddingVertical="12dp" android:id="@+id/chatRow4" android:clickable="true" android:focusable="true" android:contentDescription="@string/ui_chat_with_bilal_ahmed" android:baselineAligned="false">
+        <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="@string/ui_ba" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_purple" android:gravity="center" android:textStyle="bold" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="6sp" app:autoSizeMaxTextSize="18sp" app:autoSizeStepGranularity="1sp" />
         <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="12dp">
-          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bilal Ahmed" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" />
-          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Thanks, bro! · Mon" android:textSize="13sp" android:textColor="#252722" android:paddingTop="4dp" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ui_bilal_ahmed" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ui_thanks_bro_mon" android:textSize="14sp" android:textColor="#252722" android:paddingTop="4dp" android:id="@+id/chatRowPreview4" />
         </LinearLayout>
       </LinearLayout>
-      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/chatRow5" android:clickable="true" android:focusable="true">
-        <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="NF" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_green" android:gravity="center" android:textStyle="bold" />
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingHorizontal="16dp" android:paddingVertical="12dp" android:id="@+id/chatRow5" android:clickable="true" android:focusable="true" android:contentDescription="@string/ui_chat_with_noor_fatima" android:baselineAligned="false">
+        <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="@string/ui_nf" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_green" android:gravity="center" android:textStyle="bold" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="6sp" app:autoSizeMaxTextSize="18sp" app:autoSizeStepGranularity="1sp" />
         <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="12dp">
-          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Noor Fatima" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" />
-          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="You: Happy birthday! · Sun" android:textSize="13sp" android:textColor="#252722" android:paddingTop="4dp" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ui_noor_fatima" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ui_you_happy_birthday_sun" android:textSize="14sp" android:textColor="#252722" android:paddingTop="4dp" android:id="@+id/chatRowPreview5" />
         </LinearLayout>
       </LinearLayout>
     </LinearLayout>
   </ScrollView>
   <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8" />
-  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
-    <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Chats" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnChatsTab" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1" />
-    <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="People" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnPeopleTab" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1" />
-    <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Stories" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnStoriesTab" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1" />
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="6dp" android:baselineAligned="false">
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:id="@+id/btnChatsTab" android:clickable="true" android:focusable="true" android:contentDescription="@string/ui_chats">
+      <ImageButton android:layout_width="match_parent" android:layout_height="32dp" android:id="@+id/btnChatsTabIcon" android:src="@drawable/ic_chat" android:background="@android:color/transparent" android:padding="5dp" android:contentDescription="@string/ui_chat" android:clickable="false" android:focusable="false" app:tint="#0B5F63" android:importantForAccessibility="no" />
+      <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ui_chats" android:textSize="12sp" android:textColor="#252722" android:gravity="center" android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:id="@+id/btnPeopleTab" android:clickable="true" android:focusable="true" android:contentDescription="@string/ui_people">
+      <ImageButton android:layout_width="match_parent" android:layout_height="32dp" android:id="@+id/btnPeopleTabIcon" android:src="@drawable/ic_people" android:background="@android:color/transparent" android:padding="5dp" android:contentDescription="@string/ui_people" android:clickable="false" android:focusable="false" app:tint="#0B5F63" android:importantForAccessibility="no" />
+      <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ui_people" android:textSize="12sp" android:textColor="#252722" android:gravity="center" android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:id="@+id/btnStoriesTab" android:clickable="true" android:focusable="true" android:contentDescription="@string/ui_stories">
+      <ImageButton android:layout_width="match_parent" android:layout_height="32dp" android:id="@+id/btnStoriesTabIcon" android:src="@drawable/ic_movie" android:background="@android:color/transparent" android:padding="5dp" android:contentDescription="@string/ui_movie" android:clickable="false" android:focusable="false" app:tint="#0B5F63" android:importantForAccessibility="no" />
+      <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ui_stories" android:textSize="12sp" android:textColor="#252722" android:gravity="center" android:textStyle="bold" />
+    </LinearLayout>
   </LinearLayout>
 </LinearLayout>

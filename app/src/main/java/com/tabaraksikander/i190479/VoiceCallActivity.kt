@@ -6,18 +6,21 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-/** XML screen with ordinary click listeners and explicit Activity Intents. */
+/** A local call demonstration. It never requests phone or microphone permissions. */
 class VoiceCallActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_voice_call)
-        Ui.prepare(this)
-        findViewById<View>(R.id.btnEndCall).setOnClickListener { finish() }
-        Ui.toggle(this, R.id.btnMute, "Unmute", "Mute")
-        Ui.toggle(this, R.id.btnSpeaker, "Speaker on", "Speaker")
-        findViewById<View>(R.id.btnKeypad).setOnClickListener { Ui.info(this, "Keypad", "1  2  3\n4  5  6\n7  8  9\n*  0  #") }
-
+    override fun onCreate(state:Bundle?) {
+        super.onCreate(state);setContentView(R.layout.activity_voice_call);Ui.prepare(this)
+        val person=intent.getStringExtra("person") ?: "Ammi"
+        findViewById<TextView>(R.id.callName).text=person;findViewById<TextView>(R.id.callAvatar).text=Ui.initials(person)
+        findViewById<Chronometer>(R.id.callDuration).apply {base=state?.getLong("base") ?: (android.os.SystemClock.elapsedRealtime()-192000L);start()}
+        findViewById<View>(R.id.btnEndCall).setOnClickListener {finish()}
+        for((id,label)in listOf(R.id.btnMute to "Microphone muted",R.id.btnSpeaker to "Speaker on"))findViewById<ImageButton>(id).setOnClickListener {
+            it.isSelected=!it.isSelected;it.contentDescription=if(it.isSelected)label else if(id==R.id.btnMute)"Mute microphone" else "Speaker off"
+            it.setBackgroundResource(if(it.isSelected)R.drawable.circle_white else R.drawable.call_control)
+            (it as ImageButton).setColorFilter(android.graphics.Color.parseColor(if(it.isSelected)"#0B5F63" else "#FFFFFF"))
+        }
+        findViewById<View>(R.id.btnKeypad).setOnClickListener {val input=EditText(this);input.inputType=android.text.InputType.TYPE_CLASS_PHONE;input.hint="Enter keypad digits";androidx.appcompat.app.AlertDialog.Builder(this).setTitle("Keypad").setView(input).setPositiveButton("Done"){_,_->findViewById<View>(R.id.btnKeypad).contentDescription="Keypad digits "+input.text}.setNegativeButton("Cancel",null).show()}
     }
-
-
+    override fun onSaveInstanceState(out:Bundle){out.putLong("base",findViewById<Chronometer>(R.id.callDuration).base);super.onSaveInstanceState(out)}
+    override fun onDestroy(){findViewById<Chronometer>(R.id.callDuration).stop();super.onDestroy()}
 }
