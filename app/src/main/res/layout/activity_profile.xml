@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#FFFFFF">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp" android:orientation="horizontal" android:gravity="center_vertical" android:paddingEnd="12dp">
+        <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnBack" android:src="@drawable/ic_back" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Back"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="Jacob West" android:textSize="20sp" android:textColor="#252722" android:layout_weight="1" android:textStyle="bold"/>
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:fillViewport="true" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <FrameLayout android:layout_width="match_parent" android:layout_height="258dp">
+                <ImageView android:layout_width="match_parent" android:layout_height="190dp" android:src="@drawable/landscape_sea" android:scaleType="centerCrop" android:contentDescription="Landscape illustration"/>
+                <FrameLayout android:layout_width="144dp" android:layout_height="144dp" android:layout_gravity="bottom|start" android:layout_marginStart="16dp" android:background="@drawable/avatar_border">
+                    <TextView android:layout_width="136dp" android:layout_height="136dp" android:text="JW" android:textSize="44sp" android:textColor="#FFFFFF" android:background="@drawable/circle_teal" android:gravity="center" android:textStyle="bold" android:layout_gravity="center"/>
+                </FrameLayout>
+            </FrameLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Jacob West" android:textSize="26sp" android:textColor="#252722" android:textStyle="bold" android:gravity="start" android:id="@+id/profileName"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="834 friends" android:textSize="14sp" android:textColor="#252722" android:paddingVertical="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Digital goodies designer. Everything is designed." android:textSize="14sp" android:textColor="#252722" android:id="@+id/profileBio"/>
+                <Space android:layout_width="match_parent" android:layout_height="12dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="+ Add to story" android:textSize="14sp" android:textColor="#FFFFFF" android:id="@+id/btnPrimary" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_teal" android:clickable="true" android:focusable="true" android:layout_weight="1"/>
+                    <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Edit profile" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnSecondary" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1" android:layout_marginStart="8dp"/>
+                </LinearLayout>
+                <Space android:layout_width="match_parent" android:layout_height="12dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Posts       Photos       Videos       Groups" android:textSize="14sp" android:textColor="#252722" android:paddingVertical="12dp"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Details" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" android:padding="16dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Designer at Pixsellz
+
+Studied at FAST-NUCES
+
+Lives in Karachi, Pakistan
+
+Joined March 2019" android:textSize="15sp" android:textColor="#252722"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Friends" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" android:padding="16dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="80dp" android:layout_height="80dp" android:text="LM" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_purple" android:gravity="center" android:textStyle="bold" android:layout_marginEnd="12dp"/>
+                    <TextView android:layout_width="80dp" android:layout_height="80dp" android:text="AK" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_red" android:gravity="center" android:textStyle="bold" android:layout_marginEnd="12dp"/>
+                    <TextView android:layout_width="80dp" android:layout_height="80dp" android:text="OF" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_green" android:gravity="center" android:textStyle="bold" android:layout_marginEnd="12dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#FFFFFF">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingEnd="16dp">
+        <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnBack" android:src="@drawable/ic_back" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Back"/>
+        <EditText android:layout_width="0dp" android:layout_height="48dp" android:id="@+id/etSearch" android:hint="Search Kinnect" android:text="omar" android:textSize="15sp" android:textColor="#252722" android:textColorHint="#70736D" android:paddingHorizontal="12dp" android:background="@drawable/button_pale" android:inputType="text" android:layout_weight="1"/>
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="12dp">
+                <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="All" android:textSize="14sp" android:textColor="#252722" android:id="@+id/filter0" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1" android:layout_margin="3dp"/>
+                <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="People" android:textSize="14sp" android:textColor="#252722" android:id="@+id/filter1" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1" android:layout_margin="3dp"/>
+                <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Posts" android:textSize="14sp" android:textColor="#252722" android:id="@+id/filter2" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1" android:layout_margin="3dp"/>
+                <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Groups" android:textSize="14sp" android:textColor="#252722" android:id="@+id/filter3" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1" android:layout_margin="3dp"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="People" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" android:padding="16dp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/searchPerson0" android:clickable="true" android:focusable="true">
+                <TextView android:layout_width="52dp" android:layout_height="52dp" android:text="OF" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_green" android:gravity="center" android:textStyle="bold"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Omar Farooq" android:textSize="17sp" android:textColor="#252722" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Friend · Lives in Karachi" android:textSize="12sp" android:textColor="#252722"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/searchPerson1" android:clickable="true" android:focusable="true">
+                <TextView android:layout_width="52dp" android:layout_height="52dp" android:text="OS" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_blue" android:gravity="center" android:textStyle="bold"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Omar Siddiqui" android:textSize="17sp" android:textColor="#252722" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12 mutual friends · FAST-NUCES" android:textSize="12sp" android:textColor="#252722"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/searchPerson2" android:clickable="true" android:focusable="true">
+                <TextView android:layout_width="52dp" android:layout_height="52dp" android:text="OT" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_gold" android:gravity="center" android:textStyle="bold"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Omar Tariq" android:textSize="17sp" android:textColor="#252722" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Works at Daraz · 3 mutual friends" android:textSize="12sp" android:textColor="#252722"/>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:layout_width="match_parent" android:layout_height="48dp" android:text="See all people" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnAllPeople" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Groups" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" android:padding="16dp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp">
+                <TextView android:layout_width="44dp" android:layout_height="44dp" android:text="OP" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_purple" android:gravity="center" android:textStyle="bold"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:padding="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Omar’s Photography Circle" android:textSize="14sp" android:textColor="#252722" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Public · 2.4K members" android:textSize="12sp" android:textColor="#252722"/>
+                </LinearLayout>
+                <TextView android:layout_width="64dp" android:layout_height="48dp" android:text="Join" android:textSize="14sp" android:textColor="#FFFFFF" android:id="@+id/btnJoin" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_teal" android:clickable="true" android:focusable="true"/>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Recent searches" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" android:padding="16dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="◷    lina marsh
+
+◷    study desk karachi
+
+◷    SMD Class of 2026" android:textSize="14sp" android:textColor="#252722" android:padding="16dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

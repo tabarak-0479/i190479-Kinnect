@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#111111">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:layout_margin="8dp">
+        <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/landscape_green" android:scaleType="centerCrop" android:contentDescription="Landscape illustration"/>
+        <View android:layout_width="match_parent" android:layout_height="3dp" android:background="#DFDFD8"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+            <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnBack" android:src="@drawable/ic_back" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Back"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="Your story
+11h · Close friends" android:textSize="14sp" android:textColor="#FFFFFF" android:layout_weight="1" android:textStyle="bold"/>
+            <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnOptions" android:src="@drawable/ic_menu" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Menu"/>
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Saturday plans" android:textSize="24sp" android:textColor="#FFFFFF" android:textStyle="bold" android:background="@drawable/sticker" android:padding="12dp" android:layout_gravity="center" android:rotation="3" android:id="@+id/storyCaption"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="♥
+  ♥
+♥
+ ♥" android:textSize="24sp" android:textColor="#DF4361" android:layout_gravity="bottom|start" android:padding="20dp"/>
+    </FrameLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="8dp">
+        <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Seen by 24" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnSeen" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1"/>
+        <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Create" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnCreate" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1"/>
+        <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Highlight" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnHighlight" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1"/>
+        <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Send" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnSend" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

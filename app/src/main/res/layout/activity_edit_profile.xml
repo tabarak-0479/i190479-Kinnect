@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#FFFFFF">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp" android:orientation="horizontal" android:gravity="center_vertical" android:paddingEnd="12dp">
+        <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnBack" android:src="@drawable/ic_back" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Back"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="Edit profile" android:textSize="20sp" android:textColor="#252722" android:layout_weight="1" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="48dp" android:text="Save" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnSave" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:paddingHorizontal="14dp"/>
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:fillViewport="true" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Profile picture" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" android:padding="16dp"/>
+                <TextView android:layout_width="108dp" android:layout_height="108dp" android:text="JW" android:textSize="36sp" android:textColor="#FFFFFF" android:background="@drawable/circle_teal" android:gravity="center" android:textStyle="bold" android:layout_gravity="center" android:id="@+id/btnEditAvatar" android:clickable="true" android:focusable="true"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cover photo" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" android:padding="16dp"/>
+                <ImageView android:layout_width="match_parent" android:layout_height="120dp" android:src="@drawable/landscape_sea" android:scaleType="centerCrop" android:contentDescription="Landscape illustration" android:id="@+id/btnEditCover" android:clickable="true" android:focusable="true"/>
+                <Space android:layout_width="match_parent" android:layout_height="12dp"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="8dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Name" android:textSize="14sp" android:textColor="#252722"/>
+                    <EditText android:layout_width="0dp" android:layout_height="48dp" android:id="@+id/etName" android:hint="Name" android:text="Jacob West" android:textSize="15sp" android:textColor="#252722" android:textColorHint="#70736D" android:paddingHorizontal="12dp" android:background="@drawable/button_pale" android:inputType="textCapSentences" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="8dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Username" android:textSize="14sp" android:textColor="#252722"/>
+                    <EditText android:layout_width="0dp" android:layout_height="48dp" android:id="@+id/etUsername" android:hint="Username" android:text="jacob.west" android:textSize="15sp" android:textColor="#252722" android:textColorHint="#70736D" android:paddingHorizontal="12dp" android:background="@drawable/button_pale" android:inputType="textCapSentences" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="8dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Website" android:textSize="14sp" android:textColor="#252722"/>
+                    <EditText android:layout_width="0dp" android:layout_height="48dp" android:id="@+id/etWebsite" android:hint="Website" android:text="" android:textSize="15sp" android:textColor="#252722" android:textColorHint="#70736D" android:paddingHorizontal="12dp" android:background="@drawable/button_pale" android:inputType="textCapSentences" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="8dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Bio" android:textSize="14sp" android:textColor="#252722"/>
+                    <EditText android:layout_width="0dp" android:layout_height="48dp" android:id="@+id/etBio" android:hint="Bio" android:text="Digital goodies designer." android:textSize="15sp" android:textColor="#252722" android:textColorHint="#70736D" android:paddingHorizontal="12dp" android:background="@drawable/button_pale" android:inputType="textCapSentences" android:layout_weight="1"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Switch to professional mode" android:textSize="14sp" android:textColor="#0B5F63" android:textStyle="bold" android:paddingVertical="16dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Private information" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" android:padding="16dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="8dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Email" android:textSize="14sp" android:textColor="#252722"/>
+                    <EditText android:layout_width="0dp" android:layout_height="48dp" android:id="@+id/etEmail" android:hint="Email" android:text="jacob.west@mail.com" android:textSize="15sp" android:textColor="#252722" android:textColorHint="#70736D" android:paddingHorizontal="12dp" android:background="@drawable/button_pale" android:inputType="textCapSentences" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="8dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Phone" android:textSize="14sp" android:textColor="#252722"/>
+                    <EditText android:layout_width="0dp" android:layout_height="48dp" android:id="@+id/etPhone" android:hint="Phone" android:text="+92 300 1234567" android:textSize="15sp" android:textColor="#252722" android:textColorHint="#70736D" android:paddingHorizontal="12dp" android:background="@drawable/button_pale" android:inputType="textCapSentences" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="8dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Gender" android:textSize="14sp" android:textColor="#252722"/>
+                    <EditText android:layout_width="0dp" android:layout_height="48dp" android:id="@+id/etGender" android:hint="Gender" android:text="Male" android:textSize="15sp" android:textColor="#252722" android:textColorHint="#70736D" android:paddingHorizontal="12dp" android:background="@drawable/button_pale" android:inputType="textCapSentences" android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#111111">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:layout_margin="8dp">
+        <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/landscape_green" android:scaleType="centerCrop" android:contentDescription="Landscape illustration"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+            <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnBack" android:src="@drawable/ic_back" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Back"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="" android:textSize="14sp" android:textColor="#FFFFFF" android:layout_weight="1" android:textStyle="bold"/>
+            <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnOptions" android:src="@drawable/ic_menu" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Menu"/>
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+        <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnGallery" android:src="@drawable/ic_image" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Image"/>
+        <TextView android:layout_width="48dp" android:layout_height="48dp" android:text="ϟ" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnFlash" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true"/>
+        <TextView android:layout_width="80dp" android:layout_height="48dp" android:text="●" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnShutter" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true"/>
+        <TextView android:layout_width="48dp" android:layout_height="48dp" android:text="↻" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnFlip" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true"/>
+        <TextView android:layout_width="48dp" android:layout_height="48dp" android:text="☺" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnEffects" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true"/>
+    </LinearLayout>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="TEXT    LIVE    STORY    POST    BOOMERANG" android:textSize="12sp" android:textColor="#FFFFFF" android:gravity="center" android:padding="12dp"/>
+</LinearLayout>

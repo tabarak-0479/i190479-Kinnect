@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#FFFFFF">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp" android:orientation="horizontal" android:gravity="center_vertical" android:paddingEnd="12dp">
+        <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnBack" android:src="@drawable/ic_back" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Back"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="Comments" android:textSize="20sp" android:textColor="#252722" android:layout_weight="1" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="48dp" android:text="Most relevant" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnAction" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:paddingHorizontal="14dp"/>
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:fillViewport="true" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1.2K reactions" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" android:padding="16dp"/>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingTop="12dp">
+                <TextView android:layout_width="32dp" android:layout_height="32dp" android:text="AK" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_red" android:gravity="center" android:textStyle="bold"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:padding="12dp" android:background="@drawable/bubble_in" android:layout_marginStart="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aisha Khan" android:textSize="14sp" android:textColor="#252722" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="That sky is unreal. Which part of the beach was this?" android:textSize="14sp" android:textColor="#252722"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2h    Like    Reply" android:textSize="12sp" android:textColor="#252722" android:paddingTop="8dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingStart="56dp" android:paddingEnd="16dp" android:paddingTop="12dp">
+                <TextView android:layout_width="32dp" android:layout_height="32dp" android:text="LM" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_purple" android:gravity="center" android:textStyle="bold"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:padding="12dp" android:background="@drawable/bubble_in" android:layout_marginStart="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lina Marsh" android:textSize="14sp" android:textColor="#252722" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Near the old pier, right before the rain started!" android:textSize="14sp" android:textColor="#252722"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2h    Like    Reply" android:textSize="12sp" android:textColor="#252722" android:paddingTop="8dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingStart="56dp" android:paddingEnd="16dp" android:paddingTop="12dp">
+                <TextView android:layout_width="32dp" android:layout_height="32dp" android:text="ZR" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_blue" android:gravity="center" android:textStyle="bold"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:padding="12dp" android:background="@drawable/bubble_in" android:layout_marginStart="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Zain Raza" android:textSize="14sp" android:textColor="#252722" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@Lina Marsh next time invite the rest of us" android:textSize="14sp" android:textColor="#252722"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2h    Like    Reply" android:textSize="12sp" android:textColor="#252722" android:paddingTop="8dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="View 6 more replies" android:textSize="14sp" android:textColor="#252722" android:padding="16dp" android:textStyle="bold"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingTop="12dp">
+                <TextView android:layout_width="32dp" android:layout_height="32dp" android:text="HA" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_gold" android:gravity="center" android:textStyle="bold"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:padding="12dp" android:background="@drawable/bubble_in" android:layout_marginStart="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hamza Ali" android:textSize="14sp" android:textColor="#252722" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Same spot, one year ago:" android:textSize="14sp" android:textColor="#252722"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2h    Like    Reply" android:textSize="12sp" android:textColor="#252722" android:paddingTop="8dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView android:layout_width="match_parent" android:layout_height="130dp" android:src="@drawable/landscape_sea" android:scaleType="centerCrop" android:contentDescription="Landscape illustration" android:layout_marginStart="60dp" android:layout_marginEnd="100dp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingTop="12dp">
+                <TextView android:layout_width="32dp" android:layout_height="32dp" android:text="MC" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_gold" android:gravity="center" android:textStyle="bold"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:padding="12dp" android:background="@drawable/bubble_in" android:layout_marginStart="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Maya Chen" android:textSize="14sp" android:textColor="#252722" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Framing this one." android:textSize="14sp" android:textColor="#252722"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2h    Like    Reply" android:textSize="12sp" android:textColor="#252722" android:paddingTop="8dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/newComments"/>
+            <Space android:layout_width="match_parent" android:layout_height="12dp"/>
+        </LinearLayout>
+    </ScrollView>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Replying to Aisha Khan" android:textSize="14sp" android:textColor="#252722" android:padding="12dp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="8dp">
+        <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnCamera" android:src="@drawable/ic_camera" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Camera"/>
+        <EditText android:layout_width="0dp" android:layout_height="48dp" android:id="@+id/etReply" android:hint="Write a reply..." android:text="" android:textSize="15sp" android:textColor="#252722" android:textColorHint="#70736D" android:paddingHorizontal="12dp" android:background="@drawable/button_pale" android:inputType="textCapSentences" android:layout_weight="1"/>
+        <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnSend" android:src="@drawable/ic_share" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Share"/>
+    </LinearLayout>
+</LinearLayout>

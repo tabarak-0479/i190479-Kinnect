@@ -11,6 +11,7 @@ class SignupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
+        Ui.prepare(this)
 
         val btnBack = findViewById<TextView>(R.id.btnBack)
         val btnCreateAccount = findViewById<Button>(R.id.btnCreateAccountSignup)

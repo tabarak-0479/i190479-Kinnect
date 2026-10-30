@@ -33,6 +33,25 @@
             android:name=".HomeActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".CommentsActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ReactionActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".SearchActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".FriendsActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ProfileActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".OtherProfileActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".EditProfileActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".NotificationsActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".MenuActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".CreatePostActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".PhotoPickerActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".CameraActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".StoryEditorActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".StoryViewerActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".YourStoryActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ChatsActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ChatActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".VoiceCallActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".MarketplaceActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

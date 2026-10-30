@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#FFFFFF">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp" android:orientation="horizontal" android:gravity="center_vertical" android:paddingEnd="12dp">
+        <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnBack" android:src="@drawable/ic_back" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Back"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="Recents ⌄" android:textSize="20sp" android:textColor="#252722" android:layout_weight="1" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="48dp" android:text="Next (2)" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnNext" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:paddingHorizontal="14dp"/>
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:fillViewport="true" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <FrameLayout android:layout_width="match_parent" android:layout_height="280dp">
+                <ImageView android:layout_width="match_parent" android:layout_height="280dp" android:src="@drawable/landscape_sand" android:scaleType="centerCrop" android:contentDescription="Landscape illustration" android:id="@+id/photoPreview"/>
+                <TextView android:layout_width="180dp" android:layout_height="48dp" android:text="SELECT MULTIPLE" android:textSize="14sp" android:textColor="#FFFFFF" android:id="@+id/btnMultiple" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_teal" android:clickable="true" android:focusable="true" android:layout_gravity="bottom|end" android:layout_margin="12dp"/>
+            </FrameLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                <FrameLayout android:layout_width="0dp" android:layout_height="96dp" android:layout_weight="1" android:layout_margin="1dp" android:id="@+id/photo0" android:clickable="true" android:focusable="true" android:contentDescription="Select photo 1">
+                    <ImageView android:layout_width="match_parent" android:layout_height="96dp" android:src="@drawable/landscape_sand" android:scaleType="centerCrop" android:contentDescription="Landscape illustration"/>
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:text="1" android:textSize="14sp" android:textColor="#FFFFFF" android:gravity="center" android:background="@drawable/circle_teal" android:layout_gravity="top|end" android:layout_margin="4dp" android:id="@+id/selected0"/>
+                </FrameLayout>
+                <FrameLayout android:layout_width="0dp" android:layout_height="96dp" android:layout_weight="1" android:layout_margin="1dp" android:id="@+id/photo1" android:clickable="true" android:focusable="true" android:contentDescription="Select photo 2">
+                    <ImageView android:layout_width="match_parent" android:layout_height="96dp" android:src="@drawable/landscape_sea" android:scaleType="centerCrop" android:contentDescription="Landscape illustration"/>
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:text="○" android:textSize="14sp" android:textColor="#FFFFFF" android:gravity="center" android:background="@drawable/pale" android:layout_gravity="top|end" android:layout_margin="4dp" android:id="@+id/selected1"/>
+                </FrameLayout>
+                <FrameLayout android:layout_width="0dp" android:layout_height="96dp" android:layout_weight="1" android:layout_margin="1dp" android:id="@+id/photo2" android:clickable="true" android:focusable="true" android:contentDescription="Select photo 3">
+                    <ImageView android:layout_width="match_parent" android:layout_height="96dp" android:src="@drawable/landscape_pink" android:scaleType="centerCrop" android:contentDescription="Landscape illustration"/>
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:text="○" android:textSize="14sp" android:textColor="#FFFFFF" android:gravity="center" android:background="@drawable/pale" android:layout_gravity="top|end" android:layout_margin="4dp" android:id="@+id/selected2"/>
+                </FrameLayout>
+                <FrameLayout android:layout_width="0dp" android:layout_height="96dp" android:layout_weight="1" android:layout_margin="1dp" android:id="@+id/photo3" android:clickable="true" android:focusable="true" android:contentDescription="Select photo 4">
+                    <ImageView android:layout_width="match_parent" android:layout_height="96dp" android:src="@drawable/landscape_sea" android:scaleType="centerCrop" android:contentDescription="Landscape illustration"/>
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:text="○" android:textSize="14sp" android:textColor="#FFFFFF" android:gravity="center" android:background="@drawable/pale" android:layout_gravity="top|end" android:layout_margin="4dp" android:id="@+id/selected3"/>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                <FrameLayout android:layout_width="0dp" android:layout_height="96dp" android:layout_weight="1" android:layout_margin="1dp" android:id="@+id/photo4" android:clickable="true" android:focusable="true" android:contentDescription="Select photo 5">
+                    <ImageView android:layout_width="match_parent" android:layout_height="96dp" android:src="@drawable/landscape_green" android:scaleType="centerCrop" android:contentDescription="Landscape illustration"/>
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:text="○" android:textSize="14sp" android:textColor="#FFFFFF" android:gravity="center" android:background="@drawable/pale" android:layout_gravity="top|end" android:layout_margin="4dp" android:id="@+id/selected4"/>
+                </FrameLayout>
+                <FrameLayout android:layout_width="0dp" android:layout_height="96dp" android:layout_weight="1" android:layout_margin="1dp" android:id="@+id/photo5" android:clickable="true" android:focusable="true" android:contentDescription="Select photo 6">
+                    <ImageView android:layout_width="match_parent" android:layout_height="96dp" android:src="@drawable/landscape_pink" android:scaleType="centerCrop" android:contentDescription="Landscape illustration"/>
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:text="2" android:textSize="14sp" android:textColor="#FFFFFF" android:gravity="center" android:background="@drawable/circle_teal" android:layout_gravity="top|end" android:layout_margin="4dp" android:id="@+id/selected5"/>
+                </FrameLayout>
+                <FrameLayout android:layout_width="0dp" android:layout_height="96dp" android:layout_weight="1" android:layout_margin="1dp" android:id="@+id/photo6" android:clickable="true" android:focusable="true" android:contentDescription="Select photo 7">
+                    <ImageView android:layout_width="match_parent" android:layout_height="96dp" android:src="@drawable/landscape_night" android:scaleType="centerCrop" android:contentDescription="Landscape illustration"/>
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:text="○" android:textSize="14sp" android:textColor="#FFFFFF" android:gravity="center" android:background="@drawable/pale" android:layout_gravity="top|end" android:layout_margin="4dp" android:id="@+id/selected6"/>
+                </FrameLayout>
+                <FrameLayout android:layout_width="0dp" android:layout_height="96dp" android:layout_weight="1" android:layout_margin="1dp" android:id="@+id/photo7" android:clickable="true" android:focusable="true" android:contentDescription="Select photo 8">
+                    <ImageView android:layout_width="match_parent" android:layout_height="96dp" android:src="@drawable/landscape_sea" android:scaleType="centerCrop" android:contentDescription="Landscape illustration"/>
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:text="○" android:textSize="14sp" android:textColor="#FFFFFF" android:gravity="center" android:background="@drawable/pale" android:layout_gravity="top|end" android:layout_margin="4dp" android:id="@+id/selected7"/>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                <FrameLayout android:layout_width="0dp" android:layout_height="96dp" android:layout_weight="1" android:layout_margin="1dp" android:id="@+id/photo8" android:clickable="true" android:focusable="true" android:contentDescription="Select photo 9">
+                    <ImageView android:layout_width="match_parent" android:layout_height="96dp" android:src="@drawable/landscape_sand" android:scaleType="centerCrop" android:contentDescription="Landscape illustration"/>
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:text="○" android:textSize="14sp" android:textColor="#FFFFFF" android:gravity="center" android:background="@drawable/pale" android:layout_gravity="top|end" android:layout_margin="4dp" android:id="@+id/selected8"/>
+                </FrameLayout>
+                <FrameLayout android:layout_width="0dp" android:layout_height="96dp" android:layout_weight="1" android:layout_margin="1dp" android:id="@+id/photo9" android:clickable="true" android:focusable="true" android:contentDescription="Select photo 10">
+                    <ImageView android:layout_width="match_parent" android:layout_height="96dp" android:src="@drawable/landscape_sea" android:scaleType="centerCrop" android:contentDescription="Landscape illustration"/>
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:text="○" android:textSize="14sp" android:textColor="#FFFFFF" android:gravity="center" android:background="@drawable/pale" android:layout_gravity="top|end" android:layout_margin="4dp" android:id="@+id/selected9"/>
+                </FrameLayout>
+                <FrameLayout android:layout_width="0dp" android:layout_height="96dp" android:layout_weight="1" android:layout_margin="1dp" android:id="@+id/photo10" android:clickable="true" android:focusable="true" android:contentDescription="Select photo 11">
+                    <ImageView android:layout_width="match_parent" android:layout_height="96dp" android:src="@drawable/landscape_pink" android:scaleType="centerCrop" android:contentDescription="Landscape illustration"/>
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:text="○" android:textSize="14sp" android:textColor="#FFFFFF" android:gravity="center" android:background="@drawable/pale" android:layout_gravity="top|end" android:layout_margin="4dp" android:id="@+id/selected10"/>
+                </FrameLayout>
+                <FrameLayout android:layout_width="0dp" android:layout_height="96dp" android:layout_weight="1" android:layout_margin="1dp" android:id="@+id/photo11" android:clickable="true" android:focusable="true" android:contentDescription="Select photo 12">
+                    <ImageView android:layout_width="match_parent" android:layout_height="96dp" android:src="@drawable/landscape_sea" android:scaleType="centerCrop" android:contentDescription="Landscape illustration"/>
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:text="○" android:textSize="14sp" android:textColor="#FFFFFF" android:gravity="center" android:background="@drawable/pale" android:layout_gravity="top|end" android:layout_margin="4dp" android:id="@+id/selected11"/>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                <FrameLayout android:layout_width="0dp" android:layout_height="96dp" android:layout_weight="1" android:layout_margin="1dp" android:id="@+id/photo12" android:clickable="true" android:focusable="true" android:contentDescription="Select photo 13">
+                    <ImageView android:layout_width="match_parent" android:layout_height="96dp" android:src="@drawable/landscape_green" android:scaleType="centerCrop" android:contentDescription="Landscape illustration"/>
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:text="○" android:textSize="14sp" android:textColor="#FFFFFF" android:gravity="center" android:background="@drawable/pale" android:layout_gravity="top|end" android:layout_margin="4dp" android:id="@+id/selected12"/>
+                </FrameLayout>
+                <FrameLayout android:layout_width="0dp" android:layout_height="96dp" android:layout_weight="1" android:layout_margin="1dp" android:id="@+id/photo13" android:clickable="true" android:focusable="true" android:contentDescription="Select photo 14">
+                    <ImageView android:layout_width="match_parent" android:layout_height="96dp" android:src="@drawable/landscape_pink" android:scaleType="centerCrop" android:contentDescription="Landscape illustration"/>
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:text="○" android:textSize="14sp" android:textColor="#FFFFFF" android:gravity="center" android:background="@drawable/pale" android:layout_gravity="top|end" android:layout_margin="4dp" android:id="@+id/selected13"/>
+                </FrameLayout>
+                <FrameLayout android:layout_width="0dp" android:layout_height="96dp" android:layout_weight="1" android:layout_margin="1dp" android:id="@+id/photo14" android:clickable="true" android:focusable="true" android:contentDescription="Select photo 15">
+                    <ImageView android:layout_width="match_parent" android:layout_height="96dp" android:src="@drawable/landscape_night" android:scaleType="centerCrop" android:contentDescription="Landscape illustration"/>
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:text="○" android:textSize="14sp" android:textColor="#FFFFFF" android:gravity="center" android:background="@drawable/pale" android:layout_gravity="top|end" android:layout_margin="4dp" android:id="@+id/selected14"/>
+                </FrameLayout>
+                <FrameLayout android:layout_width="0dp" android:layout_height="96dp" android:layout_weight="1" android:layout_margin="1dp" android:id="@+id/photo15" android:clickable="true" android:focusable="true" android:contentDescription="Select photo 16">
+                    <ImageView android:layout_width="match_parent" android:layout_height="96dp" android:src="@drawable/landscape_sea" android:scaleType="centerCrop" android:contentDescription="Landscape illustration"/>
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:text="○" android:textSize="14sp" android:textColor="#FFFFFF" android:gravity="center" android:background="@drawable/pale" android:layout_gravity="top|end" android:layout_margin="4dp" android:id="@+id/selected15"/>
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Gallery" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnGallery" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1"/>
+        <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Photo" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnTakePhoto" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1"/>
+        <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Video" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnVideo" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>
