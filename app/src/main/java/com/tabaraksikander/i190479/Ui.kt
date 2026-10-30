@@ -117,6 +117,13 @@ object Ui {
                 }
             }
             if (view is TextView && view !is android.widget.EditText) {
+                if (view.text.toString() == context.getString(R.string.ui_aisha_and_1_2k_others)) {
+                    // A full-size reaction count must not squeeze the author summary into one letter per line.
+                    val row = view.parent as? android.widget.LinearLayout
+                    row?.orientation = android.widget.LinearLayout.VERTICAL
+                    row?.gravity = android.view.Gravity.START
+                    view.layoutParams = android.widget.LinearLayout.LayoutParams(-1, -2)
+                }
                 if (view.id in intArrayOf(R.id.commentLike0, R.id.commentLike1, R.id.commentLike2, R.id.commentLike3, R.id.commentLike4,
                         R.id.commentReply0, R.id.commentReply1, R.id.commentReply2, R.id.commentReply3, R.id.commentReply4, R.id.btnCancelReply)) {
                     view.layoutParams = view.layoutParams.apply { width = android.view.ViewGroup.LayoutParams.WRAP_CONTENT }
@@ -126,6 +133,24 @@ object Ui {
             if (view is android.view.ViewGroup) for (i in 0 until view.childCount) visit(view.getChildAt(i))
         }
         visit(root)
+        // Story captions keep their text at the requested font size instead of clipping a second line.
+        root.findViewById<View>(R.id.btnCreateStory)?.let { card ->
+            val strip = card.parent?.parent as? android.widget.HorizontalScrollView
+            if (strip != null) {
+                strip.layoutParams = strip.layoutParams.apply { height = dp(context, 248) }
+                val cards = card.parent as android.view.ViewGroup
+                for (i in 0 until cards.childCount) {
+                    val frame = cards.getChildAt(i) as? android.widget.FrameLayout ?: continue
+                    frame.layoutParams = frame.layoutParams.apply { height = dp(context, 224) }
+                    for (j in 0 until frame.childCount) {
+                        val caption = frame.getChildAt(j)
+                        if (caption is TextView && caption.layoutParams.width == -1) {
+                            caption.layoutParams = caption.layoutParams.apply { height = dp(context, 84) }
+                        }
+                    }
+                }
+            }
+        }
     }
     fun initials(name: String) = name.split(" ").filter { it.isNotBlank() }.take(2).joinToString("") { it.first().uppercase() }
     fun openPerson(a: AppCompatActivity, name: String) {
