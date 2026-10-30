@@ -13,6 +13,16 @@ object Ui {
     fun prepare(a: AppCompatActivity) {
         // Target SDK 37 draws edge to edge. Keep controls clear of system bars and keyboard.
         val content = a.findViewById<View>(android.R.id.content)
+        adaptWidgets(a, content)
+        val rootBackground = (content as android.view.ViewGroup).getChildAt(0)?.background as? android.graphics.drawable.ColorDrawable
+        if (rootBackground != null) {
+            content.setBackgroundColor(rootBackground.color)
+            val light = androidx.core.graphics.ColorUtils.calculateLuminance(rootBackground.color) > 0.5
+            androidx.core.view.WindowInsetsControllerCompat(a.window, a.window.decorView).apply {
+                isAppearanceLightStatusBars = light
+                isAppearanceLightNavigationBars = light
+            }
+        }
         ViewCompat.setOnApplyWindowInsetsListener(content) { v, insets ->
             val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.ime())
             v.setPadding(bars.left, bars.top, bars.right, bars.bottom)
@@ -64,6 +74,35 @@ object Ui {
     }
 
     fun dp(a: android.content.Context, value: Int) = (value * a.resources.displayMetrics.density).toInt()
+
+    /** Large system fonts stack gender choices and separate floating captions from input text. */
+    fun adaptWidgets(context: android.content.Context, root: View) {
+        if (context.resources.configuration.fontScale < 1.5f) return
+        val gender = root.findViewById<android.widget.RadioGroup>(R.id.genderGroup)
+        gender?.let { group ->
+            group.orientation = android.widget.LinearLayout.VERTICAL
+            for (i in 0 until group.childCount) {
+                val child = group.getChildAt(i)
+                if (child is android.widget.RadioButton) child.layoutParams = android.widget.RadioGroup.LayoutParams(-1, -2).apply { bottomMargin = dp(context, 8) }
+                else child.visibility = View.GONE
+            }
+        }
+        fun visit(view: View) {
+            if (view is android.widget.FrameLayout) {
+                val children = (0 until view.childCount).map { view.getChildAt(it) }
+                val field = children.filterIsInstance<android.widget.EditText>().firstOrNull()
+                val spinner = children.filterIsInstance<android.widget.Spinner>().firstOrNull()
+                val caption = children.any { it is TextView && it !is android.widget.EditText && it.text.isNotBlank() }
+                if (caption && (field != null || spinner != null)) {
+                    view.layoutParams?.let { it.height = dp(context, 80); view.layoutParams = it }
+                    field?.setPadding(field.paddingLeft, dp(context, 32), field.paddingRight, dp(context, 4))
+                    spinner?.setPadding(spinner.paddingLeft, dp(context, 30), spinner.paddingRight, spinner.paddingBottom)
+                }
+            }
+            if (view is android.view.ViewGroup) for (i in 0 until view.childCount) visit(view.getChildAt(i))
+        }
+        visit(root)
+    }
     fun initials(name: String) = name.split(" ").filter { it.isNotBlank() }.take(2).joinToString("") { it.first().uppercase() }
     fun openPerson(a: AppCompatActivity, name: String) {
         a.startActivity(Intent(a, OtherProfileActivity::class.java).putExtra("person", name))

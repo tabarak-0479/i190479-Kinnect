@@ -1,3 +1,424 @@
 <resources>
-    <string name="app_name">i190479</string>
+  <string name="app_name">i190479</string>
+  <string name="ui_landscape_illustration" formatted="false">"Landscape illustration"</string>
+  <string name="ui_brightness" formatted="false">"Brightness"</string>
+  <string name="ui_back" formatted="false">"Back"</string>
+  <string name="ui_open_photo_gallery" formatted="false">"Open photo gallery"</string>
+  <string name="ui_flash" formatted="false">"Flash"</string>
+  <string name="ui_take_picture" formatted="false">"Take picture"</string>
+  <string name="ui_flip" formatted="false">"Flip"</string>
+  <string name="ui_effects" formatted="false">"Effects"</string>
+  <string name="ui_text" formatted="false">"TEXT"</string>
+  <string name="ui_live" formatted="false">"LIVE"</string>
+  <string name="ui_story" formatted="false">"STORY"</string>
+  <string name="ui_post" formatted="false">"POST"</string>
+  <string name="ui_boomerang" formatted="false">"BOOMERANG"</string>
+  <string name="ui_ak" formatted="false">"AK"</string>
+  <string name="ui_aisha_khan" formatted="false">"Aisha Khan"</string>
+  <string name="ui_active_now" formatted="false">"Active now"</string>
+  <string name="ui_phone" formatted="false">"Phone"</string>
+  <string name="ui_video" formatted="false">"Video"</string>
+  <string name="ui_info" formatted="false">"Info"</string>
+  <string name="ui_youre_friends_on_kinnect_lives_in_karachi" formatted="false">"You’re friends on Kinnect · Lives in Karachi"</string>
+  <string name="ui_today_4_49_pm" formatted="false">"TODAY 4:49 PM"</string>
+  <string name="ui_hey_are_you_still_coming_saturday" formatted="false">"Hey! Are you still coming Saturday?"</string>
+  <string name="ui_lina_booked_the_table_for_8" formatted="false">"Lina booked the table for 8"</string>
+  <string name="ui_bring_the_camera" formatted="false">"Bring the camera"</string>
+  <string name="ui_yes_obviously" formatted="false">"Yes, obviously"</string>
+  <string name="ui_already_charged_both_batteries" formatted="false">"Already charged both batteries"</string>
+  <string name="ui_love_reaction" formatted="false">"Love reaction"</string>
+  <string name="ui_you_replied_to_aisha" formatted="false">"You replied to Aisha"</string>
+  <string name="ui_perfect_ill_be_there_by_7_45" formatted="false">"Perfect, I’ll be there by 7:45"</string>
+  <string name="ui_symbol" formatted="false">"•••"</string>
+  <string name="ui_add" formatted="false">"Add"</string>
+  <string name="ui_camera" formatted="false">"Camera"</string>
+  <string name="ui_image" formatted="false">"Image"</string>
+  <string name="ui_mic" formatted="false">"Mic"</string>
+  <string name="ui_aa" formatted="false">"Aa"</string>
+  <string name="ui_smile" formatted="false">"Smile"</string>
+  <string name="ui_like" formatted="false">"Like"</string>
+  <string name="ui_send" formatted="false">"Send"</string>
+  <string name="ui_chats" formatted="false">"Chats"</string>
+  <string name="ui_edit" formatted="false">"Edit"</string>
+  <string name="ui_search" formatted="false">"Search"</string>
+  <string name="ui_your_note" formatted="false">"Your note"</string>
+  <string name="ui_symbol_a979ef" formatted="false">"+"</string>
+  <string name="ui_aisha" formatted="false">"Aisha"</string>
+  <string name="ui_omar" formatted="false">"Omar"</string>
+  <string name="ui_of" formatted="false">"OF"</string>
+  <string name="ui_sara" formatted="false">"Sara"</string>
+  <string name="ui_si" formatted="false">"SI"</string>
+  <string name="ui_hamza" formatted="false">"Hamza"</string>
+  <string name="ui_ha" formatted="false">"HA"</string>
+  <string name="ui_chat_with_aisha_khan" formatted="false">"Chat with Aisha Khan"</string>
+  <string name="ui_sending_the_photos_tonight_2m" formatted="false">"Sending the photos tonight · 2m"</string>
+  <string name="ui_chat_with_design_crew" formatted="false">"Chat with Design crew"</string>
+  <string name="ui_mc" formatted="false">"MC"</string>
+  <string name="ui_zr" formatted="false">"ZR"</string>
+  <string name="ui_design_crew" formatted="false">"Design crew"</string>
+  <string name="ui_maya_the_new_mockups_look_clean_15m" formatted="false">"Maya: the new mockups look clean · 15m"</string>
+  <string name="ui_chat_with_lina_marsh" formatted="false">"Chat with Lina Marsh"</string>
+  <string name="ui_lm" formatted="false">"LM"</string>
+  <string name="ui_lina_marsh" formatted="false">"Lina Marsh"</string>
+  <string name="ui_you_see_you_at_the_pier_1h" formatted="false">"You: See you at the pier · 1h"</string>
+  <string name="ui_chat_with_omar_farooq" formatted="false">"Chat with Omar Farooq"</string>
+  <string name="ui_omar_farooq" formatted="false">"Omar Farooq"</string>
+  <string name="ui_haha_that_story_was_wild_3h" formatted="false">"Haha that story was wild · 3h"</string>
+  <string name="ui_chat_with_bilal_ahmed" formatted="false">"Chat with Bilal Ahmed"</string>
+  <string name="ui_ba" formatted="false">"BA"</string>
+  <string name="ui_bilal_ahmed" formatted="false">"Bilal Ahmed"</string>
+  <string name="ui_thanks_bro_mon" formatted="false">"Thanks, bro! · Mon"</string>
+  <string name="ui_chat_with_noor_fatima" formatted="false">"Chat with Noor Fatima"</string>
+  <string name="ui_nf" formatted="false">"NF"</string>
+  <string name="ui_noor_fatima" formatted="false">"Noor Fatima"</string>
+  <string name="ui_you_happy_birthday_sun" formatted="false">"You: Happy birthday! · Sun"</string>
+  <string name="ui_chat" formatted="false">"Chat"</string>
+  <string name="ui_people" formatted="false">"People"</string>
+  <string name="ui_stories" formatted="false">"Stories"</string>
+  <string name="ui_movie" formatted="false">"Movie"</string>
+  <string name="ui_comments" formatted="false">"Comments"</string>
+  <string name="ui_most_relevant" formatted="false">"Most relevant"</string>
+  <string name="ui_1_2k" formatted="false">"1.2K"</string>
+  <string name="ui_that_sky_is_unreal_which_part_of_the_beach_wa" formatted="false">"That sky is unreal. Which part of the beach was this?"</string>
+  <string name="ui_24" formatted="false">"24"</string>
+  <string name="ui_2h" formatted="false">"2h"</string>
+  <string name="ui_reply" formatted="false">"Reply"</string>
+  <string name="ui_near_the_old_pier_right_before_the_rain_start" formatted="false">"Near the old pier, right before the rain started!"</string>
+  <string name="ui_3" formatted="false">"3"</string>
+  <string name="ui_zain_raza" formatted="false">"Zain Raza"</string>
+  <string name="ui_lina_marsh_next_time_invite_the_rest_of_us" formatted="false">"@Lina Marsh next time invite the rest of us"</string>
+  <string name="ui_view_6_more_replies" formatted="false">"View 6 more replies"</string>
+  <string name="ui_hamza_ali" formatted="false">"Hamza Ali"</string>
+  <string name="ui_same_spot_one_year_ago" formatted="false">"Same spot, one year ago:"</string>
+  <string name="ui_maya_chen" formatted="false">"Maya Chen"</string>
+  <string name="ui_framing_this_one" formatted="false">"Framing this one."</string>
+  <string name="ui_replying_to_aisha_khan" formatted="false">"Replying to Aisha Khan"</string>
+  <string name="ui_cancel" formatted="false">"Cancel"</string>
+  <string name="ui_write_a_reply" formatted="false">"Write a reply..."</string>
+  <string name="ui_close_post_editor" formatted="false">"Close post editor"</string>
+  <string name="ui_create_post" formatted="false">"Create post"</string>
+  <string name="ui_post_7858ac" formatted="false">"Post"</string>
+  <string name="ui_jw" formatted="false">"JW"</string>
+  <string name="ui_jacob_west" formatted="false">"Jacob West"</string>
+  <string name="ui_public" formatted="false">"Public ⌄"</string>
+  <string name="ui_album" formatted="false">"+ Album ⌄"</string>
+  <string name="ui_weekend_plan_coffee_sketching_and_absolutely_" formatted="false">"Weekend plan: coffee, sketching, and absolutely no email."</string>
+  <string name="ui_whats_on_your_mind" formatted="false">"What’s on your mind?"</string>
+  <string name="ui_post_background_white" formatted="false">"Post background White"</string>
+  <string name="ui_post_background_teal" formatted="false">"Post background Teal"</string>
+  <string name="ui_post_background_orange" formatted="false">"Post background Orange"</string>
+  <string name="ui_post_background_blue" formatted="false">"Post background Blue"</string>
+  <string name="ui_post_background_green" formatted="false">"Post background Green"</string>
+  <string name="ui_post_background_yellow" formatted="false">"Post background Yellow"</string>
+  <string name="ui_post_background_purple" formatted="false">"Post background Purple"</string>
+  <string name="ui_post_background_black" formatted="false">"Post background Black"</string>
+  <string name="ui_photo_video" formatted="false">"Photo/video"</string>
+  <string name="ui_tag_people" formatted="false">"Tag people"</string>
+  <string name="ui_feeling_activity" formatted="false">"Feeling/activity"</string>
+  <string name="ui_check_in" formatted="false">"Check in"</string>
+  <string name="ui_live_video" formatted="false">"Live video"</string>
+  <string name="ui_create_event" formatted="false">"Create event"</string>
+  <string name="ui_edit_profile" formatted="false">"Edit profile"</string>
+  <string name="ui_save" formatted="false">"Save"</string>
+  <string name="ui_profile_picture" formatted="false">"Profile picture"</string>
+  <string name="ui_change_profile_picture" formatted="false">"Change profile picture"</string>
+  <string name="ui_cover_photo" formatted="false">"Cover photo"</string>
+  <string name="ui_change_cover_photo" formatted="false">"Change cover photo"</string>
+  <string name="ui_edit_photo" formatted="false">"Edit photo"</string>
+  <string name="ui_name" formatted="false">"Name"</string>
+  <string name="ui_username" formatted="false">"Username"</string>
+  <string name="ui_jacob_west_d5eae3" formatted="false">"jacob.west"</string>
+  <string name="ui_website" formatted="false">"Website"</string>
+  <string name="ui_bio" formatted="false">"Bio"</string>
+  <string name="ui_digital_goodies_designer" formatted="false">"Digital goodies designer."</string>
+  <string name="ui_switch_to_professional_mode" formatted="false">"Switch to professional mode"</string>
+  <string name="ui_private_information" formatted="false">"Private information"</string>
+  <string name="ui_email" formatted="false">"Email"</string>
+  <string name="ui_jacob_west_mail_com" formatted="false">"jacob.west@mail.com"</string>
+  <string name="ui_92_300_1234567" formatted="false">"+92 300 1234567"</string>
+  <string name="ui_gender" formatted="false">"Gender"</string>
+  <string name="ui_male" formatted="false">"Male"</string>
+  <string name="ui_friends" formatted="false">"Friends"</string>
+  <string name="ui_home" formatted="false">"Home"</string>
+  <string name="ui_marketplace" formatted="false">"Marketplace"</string>
+  <string name="ui_notifications" formatted="false">"Notifications"</string>
+  <string name="ui_menu" formatted="false">"Menu"</string>
+  <string name="ui_suggestions" formatted="false">"Suggestions"</string>
+  <string name="ui_your_friends" formatted="false">"Your friends"</string>
+  <string name="ui_friend_requests_12" formatted="false">"Friend requests 12"</string>
+  <string name="ui_see_all" formatted="false">"See all"</string>
+  <string name="ui_view_sara_iqbal" formatted="false">"View Sara Iqbal"</string>
+  <string name="ui_sara_iqbal" formatted="false">"Sara Iqbal"</string>
+  <string name="ui_3d" formatted="false">"3d"</string>
+  <string name="ui_8_mutual_friends" formatted="false">"8 mutual friends"</string>
+  <string name="ui_confirm" formatted="false">"Confirm"</string>
+  <string name="ui_delete" formatted="false">"Delete"</string>
+  <string name="ui_view_bilal_ahmed" formatted="false">"View Bilal Ahmed"</string>
+  <string name="ui_1w" formatted="false">"1w"</string>
+  <string name="ui_14_mutual_friends" formatted="false">"14 mutual friends"</string>
+  <string name="ui_view_noor_fatima" formatted="false">"View Noor Fatima"</string>
+  <string name="ui_2w" formatted="false">"2w"</string>
+  <string name="ui_3_mutual_friends" formatted="false">"3 mutual friends"</string>
+  <string name="ui_ds" formatted="false">"DS"</string>
+  <string name="ui_view_daniyal_shah" formatted="false">"View Daniyal Shah"</string>
+  <string name="ui_daniyal_shah" formatted="false">"Daniyal Shah"</string>
+  <string name="ui_3w" formatted="false">"3w"</string>
+  <string name="ui_21_mutual_friends" formatted="false">"21 mutual friends"</string>
+  <string name="ui_os" formatted="false">"OS"</string>
+  <string name="ui_view_omar_siddiqui" formatted="false">"View Omar Siddiqui"</string>
+  <string name="ui_omar_siddiqui" formatted="false">"Omar Siddiqui"</string>
+  <string name="ui_12_mutual_friends" formatted="false">"12 mutual friends"</string>
+  <string name="ui_ot" formatted="false">"OT"</string>
+  <string name="ui_view_omar_tariq" formatted="false">"View Omar Tariq"</string>
+  <string name="ui_omar_tariq" formatted="false">"Omar Tariq"</string>
+  <string name="ui_view_maya_chen" formatted="false">"View Maya Chen"</string>
+  <string name="ui_4w" formatted="false">"4w"</string>
+  <string name="ui_6_mutual_friends" formatted="false">"6 mutual friends"</string>
+  <string name="ui_view_zain_raza" formatted="false">"View Zain Raza"</string>
+  <string name="ui_7_mutual_friends" formatted="false">"7 mutual friends"</string>
+  <string name="ui_view_hamza_ali" formatted="false">"View Hamza Ali"</string>
+  <string name="ui_9_mutual_friends" formatted="false">"9 mutual friends"</string>
+  <string name="ui_an" formatted="false">"AN"</string>
+  <string name="ui_view_amina_noor" formatted="false">"View Amina Noor"</string>
+  <string name="ui_amina_noor" formatted="false">"Amina Noor"</string>
+  <string name="ui_5_mutual_friends" formatted="false">"5 mutual friends"</string>
+  <string name="ui_ua" formatted="false">"UA"</string>
+  <string name="ui_view_usman_ali" formatted="false">"View Usman Ali"</string>
+  <string name="ui_usman_ali" formatted="false">"Usman Ali"</string>
+  <string name="ui_4_mutual_friends" formatted="false">"4 mutual friends"</string>
+  <string name="ui_sn" formatted="false">"SN"</string>
+  <string name="ui_view_sana_nadeem" formatted="false">"View Sana Nadeem"</string>
+  <string name="ui_sana_nadeem" formatted="false">"Sana Nadeem"</string>
+  <string name="ui_2_mutual_friends" formatted="false">"2 mutual friends"</string>
+  <string name="ui_people_you_may_know" formatted="false">"People you may know"</string>
+  <string name="ui_38_mutual_friends" formatted="false">"38 mutual friends"</string>
+  <string name="ui_add_friend" formatted="false">"Add friend"</string>
+  <string name="ui_kinnect" formatted="false">"kinnect"</string>
+  <string name="ui_3_unread_chats" formatted="false">"3 unread chats"</string>
+  <string name="ui_5" formatted="false">"5"</string>
+  <string name="ui_5_unread_notifications" formatted="false">"5 unread notifications"</string>
+  <string name="ui_your_profile" formatted="false">"Your profile"</string>
+  <string name="ui_whats_on_your_mind_jacob" formatted="false">"What’s on your mind, Jacob?"</string>
+  <string name="ui_create_story" formatted="false">"Create story"</string>
+  <string name="ui_post_hidden_undo" formatted="false">"Post hidden · Undo"</string>
+  <string name="ui_lina_marsh_is_at_clifton_beach" formatted="false">"Lina Marsh is at Clifton Beach"</string>
+  <string name="ui_2h_public" formatted="false">"2h · Public"</string>
+  <string name="ui_more" formatted="false">"More"</string>
+  <string name="ui_close" formatted="false">"Close"</string>
+  <string name="ui_sunset_walk_with_the_crew_worth_every_grain_o" formatted="false">"Sunset walk with the crew. Worth every grain of sand in my shoes."</string>
+  <string name="ui_4" formatted="false">"+4"</string>
+  <string name="ui_aisha_and_1_2k_others" formatted="false">"Aisha and 1.2K others"</string>
+  <string name="ui_86_comments_12_shares" formatted="false">"86 comments · 12 shares"</string>
+  <string name="ui_comment" formatted="false">"Comment"</string>
+  <string name="ui_share" formatted="false">"Share"</string>
+  <string name="ui_english_uk" formatted="false">"English (UK)"</string>
+  <string name="ui_kinnect_logo" formatted="false">"Kinnect logo"</string>
+  <string name="ui_recent_login" formatted="false">"RECENT LOGIN"</string>
+  <string name="ui_log_in_as_jacob_west" formatted="false">"Log in as Jacob West"</string>
+  <string name="ui_2" formatted="false">"2"</string>
+  <string name="ui_2_new_account_notifications" formatted="false">"2 new account notifications"</string>
+  <string name="ui_tap_to_log_in" formatted="false">"Tap to log in"</string>
+  <string name="ui_mobile_number_or_email" formatted="false">"Mobile number or email"</string>
+  <string name="ui_password" formatted="false">"password"</string>
+  <string name="ui_password_8be3c9" formatted="false">"Password"</string>
+  <string name="ui_show_password" formatted="false">"Show password"</string>
+  <string name="ui_log_in" formatted="false">"Log in"</string>
+  <string name="ui_forgot_password" formatted="false">"Forgot password?"</string>
+  <string name="ui_create_new_account" formatted="false">"Create new account"</string>
+  <string name="ui_kinnect_from_smd" formatted="false">"Kinnect · from SMD"</string>
+  <string name="ui_from" formatted="false">"from"</string>
+  <string name="ui_smd" formatted="false">"SMD"</string>
+  <string name="ui_person" formatted="false">"Person"</string>
+  <string name="ui_sell" formatted="false">"Sell"</string>
+  <string name="ui_categories" formatted="false">"Categories"</string>
+  <string name="ui_todays_picks" formatted="false">"Today’s picks"</string>
+  <string name="ui_karachi_40_km" formatted="false">"Karachi · 40 km"</string>
+  <string name="ui_road_bike_21_speed_rs_45_000_clifton" formatted="false">"Road bike, 21-speed, Rs 45,000, Clifton"</string>
+  <string name="ui_just_listed" formatted="false">"JUST LISTED"</string>
+  <string name="ui_rs_45_000" formatted="false">"Rs 45,000"</string>
+  <string name="ui_road_bike_21_speed" formatted="false">"Road bike, 21-speed"</string>
+  <string name="ui_clifton" formatted="false">"Clifton"</string>
+  <string name="ui_rattan_armchair_rs_8_500_dha_phase_6" formatted="false">"Rattan armchair, Rs 8,500, DHA Phase 6"</string>
+  <string name="ui_rs_8_500" formatted="false">"Rs 8,500"</string>
+  <string name="ui_rattan_armchair" formatted="false">"Rattan armchair"</string>
+  <string name="ui_dha_phase_6" formatted="false">"DHA Phase 6"</string>
+  <string name="ui_solid_wood_study_desk_rs_15_000_gulshan" formatted="false">"Solid wood study desk, Rs 15,000, Gulshan"</string>
+  <string name="ui_rs_15_000" formatted="false">"Rs 15,000"</string>
+  <string name="ui_solid_wood_study_desk" formatted="false">"Solid wood study desk"</string>
+  <string name="ui_gulshan" formatted="false">"Gulshan"</string>
+  <string name="ui_ceramic_plant_pots_set_of_3_rs_3_200_saddar" formatted="false">"Ceramic plant pots, set of 3, Rs 3,200, Saddar"</string>
+  <string name="ui_rs_3_200" formatted="false">"Rs 3,200"</string>
+  <string name="ui_ceramic_plant_pots_set_of_3" formatted="false">"Ceramic plant pots, set of 3"</string>
+  <string name="ui_saddar" formatted="false">"Saddar"</string>
+  <string name="ui_sun" formatted="false">"Sun"</string>
+  <string name="ui_see_your_profile" formatted="false">"See your profile"</string>
+  <string name="ui_all_shortcuts" formatted="false">"All shortcuts"</string>
+  <string name="ui_memories" formatted="false">"Memories"</string>
+  <string name="ui_saved" formatted="false">"Saved"</string>
+  <string name="ui_groups" formatted="false">"Groups"</string>
+  <string name="ui_events" formatted="false">"Events"</string>
+  <string name="ui_see_more" formatted="false">"See more"</string>
+  <string name="ui_expand_help_support" formatted="false">"Expand Help &amp; support"</string>
+  <string name="ui_help_support" formatted="false">"Help &amp; support"</string>
+  <string name="ui_navigation_guide" formatted="false">"Navigation guide"</string>
+  <string name="ui_about_kinnect" formatted="false">"About Kinnect"</string>
+  <string name="ui_expand_settings_privacy" formatted="false">"Expand Settings &amp; privacy"</string>
+  <string name="ui_settings_privacy" formatted="false">"Settings &amp; privacy"</string>
+  <string name="ui_notification_badges" formatted="false">"Notification badges"</string>
+  <string name="ui_larger_app_text" formatted="false">"Larger app text"</string>
+  <string name="ui_expand_also_from_smd" formatted="false">"Expand Also from SMD"</string>
+  <string name="ui_also_from_smd" formatted="false">"Also from SMD"</string>
+  <string name="ui_software_for_mobile_devices_nkinnect_cs4039" formatted="false">"Software for Mobile Devices\nKinnect · CS4039"</string>
+  <string name="ui_log_out" formatted="false">"Log out"</string>
+  <string name="ui_new" formatted="false">"New"</string>
+  <string name="ui_heart" formatted="false">"heart"</string>
+  <string name="ui_5m" formatted="false">"5m"</string>
+  <string name="ui_person_d39a47" formatted="false">"person"</string>
+  <string name="ui_20m" formatted="false">"20m"</string>
+  <string name="ui_earlier" formatted="false">"Earlier"</string>
+  <string name="ui_comment_118a99" formatted="false">"comment"</string>
+  <string name="ui_dc" formatted="false">"DC"</string>
+  <string name="ui_people_ab3ccc" formatted="false">"people"</string>
+  <string name="ui_5h" formatted="false">"5h"</string>
+  <string name="ui_tag" formatted="false">"tag"</string>
+  <string name="ui_yesterday" formatted="false">"Yesterday"</string>
+  <string name="ui_like_c4eb7d" formatted="false">"like"</string>
+  <string name="ui_2d" formatted="false">"2d"</string>
+  <string name="ui_youre_all_caught_up_with_earlier_activity" formatted="false">"You’re all caught up with earlier activity."</string>
+  <string name="ui_see_previous_notifications" formatted="false">"See previous notifications"</string>
+  <string name="ui_selected_profile_picture" formatted="false">"Selected profile picture"</string>
+  <string name="ui_1_204_friends_38_mutual" formatted="false">"1,204 friends · 38 mutual"</string>
+  <string name="ui_night_photographer_karachi_after_dark" formatted="false">"Night photographer. Karachi after dark."</string>
+  <string name="ui_message" formatted="false">"Message"</string>
+  <string name="ui_friends_with_aisha_khan_lina_marsh_and_36_oth" formatted="false">"Friends with Aisha Khan, Lina Marsh and 36 others"</string>
+  <string name="ui_work" formatted="false">"Work"</string>
+  <string name="ui_photographer_at_studio_nocturne" formatted="false">"Photographer at Studio Nocturne"</string>
+  <string name="ui_pin" formatted="false">"Pin"</string>
+  <string name="ui_lives_in_karachi_pakistan" formatted="false">"Lives in Karachi, Pakistan"</string>
+  <string name="ui_history" formatted="false">"History"</string>
+  <string name="ui_joined_june_2017" formatted="false">"Joined June 2017"</string>
+  <string name="ui_photos" formatted="false">"Photos"</string>
+  <string name="ui_recents" formatted="false">"Recents ⌄"</string>
+  <string name="ui_next_2" formatted="false">"Next (2)"</string>
+  <string name="ui_select_multiple" formatted="false">"SELECT MULTIPLE"</string>
+  <string name="ui_toggle_photo_crop" formatted="false">"Toggle photo crop"</string>
+  <string name="ui_select_photo_1" formatted="false">"Select photo 1"</string>
+  <string name="ui_1" formatted="false">"1"</string>
+  <string name="ui_select_photo_2" formatted="false">"Select photo 2"</string>
+  <string name="ui_symbol_d19518" formatted="false">"○"</string>
+  <string name="ui_select_photo_3" formatted="false">"Select photo 3"</string>
+  <string name="ui_select_photo_4" formatted="false">"Select photo 4"</string>
+  <string name="ui_select_photo_5" formatted="false">"Select photo 5"</string>
+  <string name="ui_select_photo_6" formatted="false">"Select photo 6"</string>
+  <string name="ui_select_photo_7" formatted="false">"Select photo 7"</string>
+  <string name="ui_0_23" formatted="false">"0:23"</string>
+  <string name="ui_select_photo_8" formatted="false">"Select photo 8"</string>
+  <string name="ui_select_photo_9" formatted="false">"Select photo 9"</string>
+  <string name="ui_select_photo_10" formatted="false">"Select photo 10"</string>
+  <string name="ui_select_photo_11" formatted="false">"Select photo 11"</string>
+  <string name="ui_select_photo_12" formatted="false">"Select photo 12"</string>
+  <string name="ui_select_photo_13" formatted="false">"Select photo 13"</string>
+  <string name="ui_select_photo_14" formatted="false">"Select photo 14"</string>
+  <string name="ui_select_photo_15" formatted="false">"Select photo 15"</string>
+  <string name="ui_select_photo_16" formatted="false">"Select photo 16"</string>
+  <string name="ui_gallery" formatted="false">"Gallery"</string>
+  <string name="ui_photo" formatted="false">"Photo"</string>
+  <string name="ui_834_friends" formatted="false">"834 friends"</string>
+  <string name="ui_digital_goodies_designer_everything_is_design" formatted="false">"Digital goodies designer. Everything is designed."</string>
+  <string name="ui_add_to_story" formatted="false">"Add to story"</string>
+  <string name="ui_posts" formatted="false">"Posts"</string>
+  <string name="ui_videos" formatted="false">"Videos"</string>
+  <string name="ui_details" formatted="false">"Details"</string>
+  <string name="ui_designer_at_pixsellz" formatted="false">"Designer at Pixsellz"</string>
+  <string name="ui_school" formatted="false">"School"</string>
+  <string name="ui_studied_at_fast_nuces" formatted="false">"Studied at FAST-NUCES"</string>
+  <string name="ui_joined_march_2019" formatted="false">"Joined March 2019"</string>
+  <string name="ui_find_friends" formatted="false">"Find friends"</string>
+  <string name="ui_linas_post" formatted="false">"Lina’s post"</string>
+  <string name="ui_that_sky_is_unreal" formatted="false">"That sky is unreal."</string>
+  <string name="ui_dismiss_reaction_picker" formatted="false">"Dismiss reaction picker"</string>
+  <string name="ui_love" formatted="false">"Love"</string>
+  <string name="ui_haha" formatted="false">"Haha"</string>
+  <string name="ui_wow" formatted="false">"Wow"</string>
+  <string name="ui_sad" formatted="false">"Sad"</string>
+  <string name="ui_angry" formatted="false">"Angry"</string>
+  <string name="ui_omar_4a6db2" formatted="false">"omar"</string>
+  <string name="ui_search_kinnect" formatted="false">"Search Kinnect"</string>
+  <string name="ui_clear_search" formatted="false">"Clear search"</string>
+  <string name="ui_all" formatted="false">"All"</string>
+  <string name="ui_no_matching_people" formatted="false">"No matching people"</string>
+  <string name="ui_friend_lives_in_karachi" formatted="false">"Friend · Lives in Karachi"</string>
+  <string name="ui_12_mutual_friends_fast_nuces" formatted="false">"12 mutual friends · FAST-NUCES"</string>
+  <string name="ui_works_at_daraz_3_mutual_friends" formatted="false">"Works at Daraz · 3 mutual friends"</string>
+  <string name="ui_see_all_people" formatted="false">"See all people"</string>
+  <string name="ui_op" formatted="false">"OP"</string>
+  <string name="ui_omars_photography_circle" formatted="false">"Omar’s Photography Circle"</string>
+  <string name="ui_public_2_4k_members" formatted="false">"Public · 2.4K members"</string>
+  <string name="ui_join" formatted="false">"Join"</string>
+  <string name="ui_recent_searches" formatted="false">"Recent searches"</string>
+  <string name="ui_lina_marsh_c70fdd" formatted="false">"lina marsh"</string>
+  <string name="ui_remove_recent_search_lina_marsh" formatted="false">"Remove recent search lina marsh"</string>
+  <string name="ui_study_desk_karachi" formatted="false">"study desk karachi"</string>
+  <string name="ui_remove_recent_search_study_desk_karachi" formatted="false">"Remove recent search study desk karachi"</string>
+  <string name="ui_smd_class_of_2026" formatted="false">"SMD Class of 2026"</string>
+  <string name="ui_remove_recent_search_smd_class_of_2026" formatted="false">"Remove recent search SMD Class of 2026"</string>
+  <string name="ui_create_account" formatted="false">"Create account"</string>
+  <string name="ui_step_2_of_3" formatted="false">"Step 2 of 3"</string>
+  <string name="ui_whats_your_name_and_nbirthday" formatted="false">"What’s your name and\nbirthday?"</string>
+  <string name="ui_selected_profile_photo" formatted="false">"Selected profile photo"</string>
+  <string name="ui_add_profile_photo" formatted="false">"Add profile photo"</string>
+  <string name="ui_jacob" formatted="false">"Jacob"</string>
+  <string name="ui_first_name" formatted="false">"First name"</string>
+  <string name="ui_west" formatted="false">"West"</string>
+  <string name="ui_last_name" formatted="false">"Last name"</string>
+  <string name="ui_birthday" formatted="false">"Birthday"</string>
+  <string name="ui_day" formatted="false">"Day"</string>
+  <string name="ui_month" formatted="false">"Month"</string>
+  <string name="ui_year" formatted="false">"Year"</string>
+  <string name="ui_female" formatted="false">"Female"</string>
+  <string name="ui_custom" formatted="false">"Custom"</string>
+  <string name="ui_new_password" formatted="false">"New password"</string>
+  <string name="ui_medium" formatted="false">"Medium"</string>
+  <string name="ui_i_agree_to_the_kinnect_terms_and_privacy_poli" formatted="false">"I agree to the Kinnect Terms and Privacy Policy."</string>
+  <string name="ui_already_have_an_account_log_in" formatted="false">"Already have an account? Log in"</string>
+  <string name="ui_tooltag" formatted="false">"toolTag"</string>
+  <string name="ui_edit_story_text" formatted="false">"Edit story text"</string>
+  <string name="ui_tool1" formatted="false">"tool1"</string>
+  <string name="ui_tool2" formatted="false">"tool2"</string>
+  <string name="ui_tool3" formatted="false">"tool3"</string>
+  <string name="ui_saturday_plans" formatted="false">"Saturday plans"</string>
+  <string name="ui_your_story" formatted="false">"Your story"</string>
+  <string name="ui_close_friends" formatted="false">"Close friends"</string>
+  <string name="ui_sharearrow" formatted="false">"ShareArrow"</string>
+  <string name="ui_previous_story" formatted="false">"Previous story"</string>
+  <string name="ui_next_story" formatted="false">"Next story"</string>
+  <string name="ui_5h_public" formatted="false">"5h · Public"</string>
+  <string name="ui_options" formatted="false">"Options"</string>
+  <string name="ui_karachi_nights" formatted="false">"Karachi nights"</string>
+  <string name="ui_send_message" formatted="false">"Send message..."</string>
+  <string name="ui_storyreplysend" formatted="false">"StoryReplySend"</string>
+  <string name="ui_storythumb" formatted="false">"StoryThumb"</string>
+  <string name="ui_storylike" formatted="false">"StoryLike"</string>
+  <string name="ui_storysmile" formatted="false">"StorySmile"</string>
+  <string name="ui_end_to_end_encrypted" formatted="false">"End-to-end encrypted"</string>
+  <string name="ui_am" formatted="false">"AM"</string>
+  <string name="ui_ammi" formatted="false">"Ammi"</string>
+  <string name="ui_favorite_contact" formatted="false">"Favorite contact"</string>
+  <string name="ui_03_12" formatted="false">"03:12"</string>
+  <string name="ui_keypad" formatted="false">"Keypad"</string>
+  <string name="ui_end_phone" formatted="false">"End Phone"</string>
+  <string name="ui_speaker" formatted="false">"Speaker"</string>
+  <string name="ui_11h_close_friends" formatted="false">"11h · Close friends"</string>
+  <string name="ui_floatingheart0" formatted="false">"floatingHeart0"</string>
+  <string name="ui_floatingheart1" formatted="false">"floatingHeart1"</string>
+  <string name="ui_floatingheart2" formatted="false">"floatingHeart2"</string>
+  <string name="ui_floatingheart3" formatted="false">"floatingHeart3"</string>
+  <string name="ui_floatingheart4" formatted="false">"floatingHeart4"</string>
+  <string name="ui_seen_by_24" formatted="false">"Seen by 24"</string>
+  <string name="ui_create" formatted="false">"Create"</string>
+  <string name="ui_createicon" formatted="false">"CreateIcon"</string>
+  <string name="ui_highlight" formatted="false">"Highlight"</string>
+  <string name="ui_highlighticon" formatted="false">"HighlightIcon"</string>
+  <string name="ui_sendicon" formatted="false">"SendIcon"</string>
+  <string name="ui_optionsicon" formatted="false">"OptionsIcon"</string>
 </resources>
