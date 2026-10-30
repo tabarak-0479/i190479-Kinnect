@@ -11,6 +11,9 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         Ui.prepare(this)
+        findViewById<android.view.View>(R.id.tvForgotPassword).setOnClickListener {
+            Ui.info(this, "Forgot password?", "Account recovery is not connected to a server in this local UI assignment.")
+        }
 
         val btnLogin = findViewById<Button>(R.id.btnLogin)
         val btnCreateAccount = findViewById<Button>(R.id.btnCreateAccount)

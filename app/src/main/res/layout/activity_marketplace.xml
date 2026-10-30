@@ -1,77 +1,79 @@
-<?xml version="1.0" ?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#FFFFFF">
-    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp" android:orientation="horizontal" android:gravity="center_vertical">
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="Marketplace" android:textSize="25sp" android:textColor="#252722" android:layout_weight="1" android:textStyle="bold" android:paddingStart="16dp"/>
-        <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnSearch" android:src="@drawable/ic_search" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Search"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#FFFFFF">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="56dp" android:orientation="horizontal" android:gravity="center_vertical">
+    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="Marketplace" android:textSize="25sp" android:textColor="#252722" android:layout_weight="1" android:textStyle="bold" android:paddingStart="16dp" />
+    <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnSearch" android:src="@drawable/ic_search" android:background="@drawable/pale" android:padding="12dp" android:contentDescription="Search" app:tint="#0B5F63" />
+  </LinearLayout>
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
+      <ImageButton android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/navHome" android:src="@drawable/ic_home" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Home" app:tint="#62655F" />
+      <View android:layout_width="match_parent" android:layout_height="3dp" android:background="#FFFFFF" />
     </LinearLayout>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
-        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
-            <ImageButton android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/navHome" android:src="@drawable/ic_home" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Home"/>
-            <View android:layout_width="match_parent" android:layout_height="3dp" android:background="#FFFFFF"/>
-        </LinearLayout>
-        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
-            <ImageButton android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/navPeople" android:src="@drawable/ic_people" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="People"/>
-            <View android:layout_width="match_parent" android:layout_height="3dp" android:background="#FFFFFF"/>
-        </LinearLayout>
-        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
-            <ImageButton android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/navMarketplace" android:src="@drawable/ic_marketplace" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Marketplace"/>
-            <View android:layout_width="match_parent" android:layout_height="3dp" android:background="#0B5F63"/>
-        </LinearLayout>
-        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
-            <ImageButton android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/navNotifications" android:src="@drawable/ic_notifications" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Notifications"/>
-            <View android:layout_width="match_parent" android:layout_height="3dp" android:background="#FFFFFF"/>
-        </LinearLayout>
-        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
-            <ImageButton android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/navMenu" android:src="@drawable/ic_menu" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Menu"/>
-            <View android:layout_width="match_parent" android:layout_height="3dp" android:background="#FFFFFF"/>
-        </LinearLayout>
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
+      <ImageButton android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/navPeople" android:src="@drawable/ic_people" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="People" app:tint="#62655F" />
+      <View android:layout_width="match_parent" android:layout_height="3dp" android:background="#FFFFFF" />
     </LinearLayout>
-    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8"/>
-    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true">
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="12dp">
-                <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="✎ Sell" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnSell" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1" android:layout_margin="4dp"/>
-                <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Categories" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnCategories" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1" android:layout_margin="4dp"/>
-            </LinearLayout>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Today’s picks     Karachi · 40 km" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" android:padding="16dp"/>
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_margin="8dp" android:id="@+id/item0" android:clickable="true" android:focusable="true">
-                    <FrameLayout android:layout_width="match_parent" android:layout_height="170dp">
-                        <ImageView android:layout_width="match_parent" android:layout_height="170dp" android:src="@drawable/landscape_green" android:scaleType="centerCrop" android:contentDescription="Landscape illustration"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="JUST LISTED" android:textSize="10sp" android:textColor="#FFFFFF" android:background="@drawable/sticker" android:padding="6dp" android:layout_margin="8dp"/>
-                    </FrameLayout>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rs 45,000" android:textSize="17sp" android:textColor="#252722" android:textStyle="bold" android:paddingTop="8dp"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Road bike, 21-speed" android:textSize="14sp" android:textColor="#252722"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Clifton" android:textSize="12sp" android:textColor="#686C65"/>
-                </LinearLayout>
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_margin="8dp" android:id="@+id/item1" android:clickable="true" android:focusable="true">
-                    <FrameLayout android:layout_width="match_parent" android:layout_height="170dp">
-                        <ImageView android:layout_width="match_parent" android:layout_height="170dp" android:src="@drawable/landscape_pink" android:scaleType="centerCrop" android:contentDescription="Landscape illustration"/>
-                    </FrameLayout>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rs 8,500" android:textSize="17sp" android:textColor="#252722" android:textStyle="bold" android:paddingTop="8dp"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rattan armchair" android:textSize="14sp" android:textColor="#252722"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DHA Phase 6" android:textSize="12sp" android:textColor="#686C65"/>
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_margin="8dp" android:id="@+id/item2" android:clickable="true" android:focusable="true">
-                    <FrameLayout android:layout_width="match_parent" android:layout_height="170dp">
-                        <ImageView android:layout_width="match_parent" android:layout_height="170dp" android:src="@drawable/landscape_sea" android:scaleType="centerCrop" android:contentDescription="Landscape illustration"/>
-                    </FrameLayout>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rs 15,000" android:textSize="17sp" android:textColor="#252722" android:textStyle="bold" android:paddingTop="8dp"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Solid wood study desk" android:textSize="14sp" android:textColor="#252722"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gulshan" android:textSize="12sp" android:textColor="#686C65"/>
-                </LinearLayout>
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_margin="8dp" android:id="@+id/item3" android:clickable="true" android:focusable="true">
-                    <FrameLayout android:layout_width="match_parent" android:layout_height="170dp">
-                        <ImageView android:layout_width="match_parent" android:layout_height="170dp" android:src="@drawable/landscape_sand" android:scaleType="centerCrop" android:contentDescription="Landscape illustration"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="JUST LISTED" android:textSize="10sp" android:textColor="#FFFFFF" android:background="@drawable/sticker" android:padding="6dp" android:layout_margin="8dp"/>
-                    </FrameLayout>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rs 3,200" android:textSize="17sp" android:textColor="#252722" android:textStyle="bold" android:paddingTop="8dp"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ceramic plant pots, set of 3" android:textSize="14sp" android:textColor="#252722"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Saddar" android:textSize="12sp" android:textColor="#686C65"/>
-                </LinearLayout>
-            </LinearLayout>
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
+      <ImageButton android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/navMarketplace" android:src="@drawable/ic_marketplace" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Marketplace" app:tint="#0B5F63" />
+      <View android:layout_width="match_parent" android:layout_height="3dp" android:background="#0B5F63" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
+      <FrameLayout android:layout_width="match_parent" android:layout_height="48dp">
+        <ImageButton android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/navNotifications" android:src="@drawable/ic_notifications" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Notifications" app:tint="#62655F" />
+        <TextView android:layout_width="16dp" android:layout_height="16dp" android:text="5" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="10sp" android:gravity="center" android:background="@drawable/circle_red" android:layout_gravity="top|end" android:layout_marginEnd="8dp" android:contentDescription="5 notifications" />
+      </FrameLayout>
+      <View android:layout_width="match_parent" android:layout_height="3dp" android:background="#FFFFFF" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
+      <ImageButton android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/navMenu" android:src="@drawable/ic_menu" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Menu" app:tint="#62655F" />
+      <View android:layout_width="match_parent" android:layout_height="3dp" android:background="#FFFFFF" />
+    </LinearLayout>
+  </LinearLayout>
+  <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8" />
+  <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="12dp">
+        <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="✎ Sell" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnSell" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1" android:layout_margin="4dp" />
+        <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Categories" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnCategories" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1" android:layout_margin="4dp" />
+      </LinearLayout>
+      <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Today’s picks     Karachi · 40 km" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" android:padding="16dp" />
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_margin="8dp" android:id="@+id/item0" android:clickable="true" android:focusable="true">
+          <FrameLayout android:layout_width="match_parent" android:layout_height="170dp">
+            <ImageView android:layout_width="match_parent" android:layout_height="170dp" android:src="@drawable/landscape_green" android:scaleType="centerCrop" android:contentDescription="Landscape illustration" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="JUST LISTED" android:textSize="10sp" android:textColor="#FFFFFF" android:background="@drawable/sticker" android:padding="6dp" android:layout_margin="8dp" />
+          </FrameLayout>
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rs 45,000" android:textSize="17sp" android:textColor="#252722" android:textStyle="bold" android:paddingTop="8dp" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Road bike, 21-speed" android:textSize="14sp" android:textColor="#252722" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Clifton" android:textSize="12sp" android:textColor="#686C65" />
         </LinearLayout>
-    </ScrollView>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_margin="8dp" android:id="@+id/item1" android:clickable="true" android:focusable="true">
+          <FrameLayout android:layout_width="match_parent" android:layout_height="170dp">
+            <ImageView android:layout_width="match_parent" android:layout_height="170dp" android:src="@drawable/landscape_pink" android:scaleType="centerCrop" android:contentDescription="Landscape illustration" />
+          </FrameLayout>
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rs 8,500" android:textSize="17sp" android:textColor="#252722" android:textStyle="bold" android:paddingTop="8dp" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rattan armchair" android:textSize="14sp" android:textColor="#252722" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DHA Phase 6" android:textSize="12sp" android:textColor="#686C65" />
+        </LinearLayout>
+      </LinearLayout>
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_margin="8dp" android:id="@+id/item2" android:clickable="true" android:focusable="true">
+          <FrameLayout android:layout_width="match_parent" android:layout_height="170dp">
+            <ImageView android:layout_width="match_parent" android:layout_height="170dp" android:src="@drawable/landscape_sea" android:scaleType="centerCrop" android:contentDescription="Landscape illustration" />
+          </FrameLayout>
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rs 15,000" android:textSize="17sp" android:textColor="#252722" android:textStyle="bold" android:paddingTop="8dp" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Solid wood study desk" android:textSize="14sp" android:textColor="#252722" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gulshan" android:textSize="12sp" android:textColor="#686C65" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_margin="8dp" android:id="@+id/item3" android:clickable="true" android:focusable="true">
+          <FrameLayout android:layout_width="match_parent" android:layout_height="170dp">
+            <ImageView android:layout_width="match_parent" android:layout_height="170dp" android:src="@drawable/landscape_sand" android:scaleType="centerCrop" android:contentDescription="Landscape illustration" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="JUST LISTED" android:textSize="10sp" android:textColor="#FFFFFF" android:background="@drawable/sticker" android:padding="6dp" android:layout_margin="8dp" />
+          </FrameLayout>
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rs 3,200" android:textSize="17sp" android:textColor="#252722" android:textStyle="bold" android:paddingTop="8dp" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ceramic plant pots, set of 3" android:textSize="14sp" android:textColor="#252722" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Saddar" android:textSize="12sp" android:textColor="#686C65" />
+        </LinearLayout>
+      </LinearLayout>
+    </LinearLayout>
+  </ScrollView>
 </LinearLayout>

@@ -36,4 +36,10 @@ class CreatePostActivity : AppCompatActivity() {
     }
 
 
+    override fun onResume() {
+        super.onResume()
+        val count = getSharedPreferences("demo", MODE_PRIVATE).getInt("photos", 0)
+        findViewById<View>(R.id.btnPhoto).contentDescription = "Photo/video · $count selected"
+        (findViewById<LinearLayout>(R.id.btnPhoto).getChildAt(1) as TextView).text = if (count > 0) "Photo/video · $count selected" else "Photo/video"
+    }
 }

@@ -1,85 +1,87 @@
-<?xml version="1.0" ?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#FFFFFF">
-    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp" android:orientation="horizontal" android:gravity="center_vertical">
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="Friends" android:textSize="25sp" android:textColor="#252722" android:layout_weight="1" android:textStyle="bold" android:paddingStart="16dp"/>
-        <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnSearch" android:src="@drawable/ic_search" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Search"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#FFFFFF">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="56dp" android:orientation="horizontal" android:gravity="center_vertical">
+    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="Friends" android:textSize="25sp" android:textColor="#252722" android:layout_weight="1" android:textStyle="bold" android:paddingStart="16dp" />
+    <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnSearch" android:src="@drawable/ic_search" android:background="@drawable/pale" android:padding="12dp" android:contentDescription="Search" app:tint="#0B5F63" />
+  </LinearLayout>
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
+      <ImageButton android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/navHome" android:src="@drawable/ic_home" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Home" app:tint="#62655F" />
+      <View android:layout_width="match_parent" android:layout_height="3dp" android:background="#FFFFFF" />
     </LinearLayout>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
-        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
-            <ImageButton android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/navHome" android:src="@drawable/ic_home" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Home"/>
-            <View android:layout_width="match_parent" android:layout_height="3dp" android:background="#FFFFFF"/>
-        </LinearLayout>
-        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
-            <ImageButton android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/navPeople" android:src="@drawable/ic_people" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="People"/>
-            <View android:layout_width="match_parent" android:layout_height="3dp" android:background="#0B5F63"/>
-        </LinearLayout>
-        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
-            <ImageButton android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/navMarketplace" android:src="@drawable/ic_marketplace" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Marketplace"/>
-            <View android:layout_width="match_parent" android:layout_height="3dp" android:background="#FFFFFF"/>
-        </LinearLayout>
-        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
-            <ImageButton android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/navNotifications" android:src="@drawable/ic_notifications" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Notifications"/>
-            <View android:layout_width="match_parent" android:layout_height="3dp" android:background="#FFFFFF"/>
-        </LinearLayout>
-        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
-            <ImageButton android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/navMenu" android:src="@drawable/ic_menu" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Menu"/>
-            <View android:layout_width="match_parent" android:layout_height="3dp" android:background="#FFFFFF"/>
-        </LinearLayout>
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
+      <ImageButton android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/navPeople" android:src="@drawable/ic_people" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="People" app:tint="#0B5F63" />
+      <View android:layout_width="match_parent" android:layout_height="3dp" android:background="#0B5F63" />
     </LinearLayout>
-    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8"/>
-    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true">
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp">
-                <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Suggestions" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnSuggestions" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1"/>
-                <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Your friends" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnYourFriends" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1"/>
-            </LinearLayout>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Friend requests 12" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" android:padding="16dp"/>
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/request0">
-                <TextView android:layout_width="76dp" android:layout_height="76dp" android:text="SI" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_blue" android:gravity="center" android:textStyle="bold" android:id="@+id/friendProfile0" android:clickable="true" android:focusable="true"/>
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="14dp">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sara Iqbal" android:textSize="17sp" android:textColor="#252722" android:textStyle="bold"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="8 mutual friends" android:textSize="12sp" android:textColor="#252722" android:paddingVertical="6dp"/>
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
-                        <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Confirm" android:textSize="14sp" android:textColor="#FFFFFF" android:id="@+id/confirm0" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_teal" android:clickable="true" android:focusable="true" android:layout_weight="1"/>
-                        <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Delete" android:textSize="14sp" android:textColor="#252722" android:id="@+id/delete0" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1" android:layout_marginStart="8dp"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/request1">
-                <TextView android:layout_width="76dp" android:layout_height="76dp" android:text="BA" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_purple" android:gravity="center" android:textStyle="bold" android:id="@+id/friendProfile1" android:clickable="true" android:focusable="true"/>
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="14dp">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bilal Ahmed" android:textSize="17sp" android:textColor="#252722" android:textStyle="bold"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="14 mutual friends" android:textSize="12sp" android:textColor="#252722" android:paddingVertical="6dp"/>
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
-                        <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Confirm" android:textSize="14sp" android:textColor="#FFFFFF" android:id="@+id/confirm1" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_teal" android:clickable="true" android:focusable="true" android:layout_weight="1"/>
-                        <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Delete" android:textSize="14sp" android:textColor="#252722" android:id="@+id/delete1" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1" android:layout_marginStart="8dp"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/request2">
-                <TextView android:layout_width="76dp" android:layout_height="76dp" android:text="NF" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_green" android:gravity="center" android:textStyle="bold" android:id="@+id/friendProfile2" android:clickable="true" android:focusable="true"/>
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="14dp">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Noor Fatima" android:textSize="17sp" android:textColor="#252722" android:textStyle="bold"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3 mutual friends" android:textSize="12sp" android:textColor="#252722" android:paddingVertical="6dp"/>
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
-                        <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Confirm" android:textSize="14sp" android:textColor="#FFFFFF" android:id="@+id/confirm2" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_teal" android:clickable="true" android:focusable="true" android:layout_weight="1"/>
-                        <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Delete" android:textSize="14sp" android:textColor="#252722" android:id="@+id/delete2" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1" android:layout_marginStart="8dp"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/request3">
-                <TextView android:layout_width="76dp" android:layout_height="76dp" android:text="DS" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_red" android:gravity="center" android:textStyle="bold" android:id="@+id/friendProfile3" android:clickable="true" android:focusable="true"/>
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="14dp">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Daniyal Shah" android:textSize="17sp" android:textColor="#252722" android:textStyle="bold"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="21 mutual friends" android:textSize="12sp" android:textColor="#252722" android:paddingVertical="6dp"/>
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
-                        <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Confirm" android:textSize="14sp" android:textColor="#FFFFFF" android:id="@+id/confirm3" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_teal" android:clickable="true" android:focusable="true" android:layout_weight="1"/>
-                        <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Delete" android:textSize="14sp" android:textColor="#252722" android:id="@+id/delete3" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1" android:layout_marginStart="8dp"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="People you may know" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" android:padding="16dp"/>
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
+      <ImageButton android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/navMarketplace" android:src="@drawable/ic_marketplace" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Marketplace" app:tint="#62655F" />
+      <View android:layout_width="match_parent" android:layout_height="3dp" android:background="#FFFFFF" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
+      <FrameLayout android:layout_width="match_parent" android:layout_height="48dp">
+        <ImageButton android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/navNotifications" android:src="@drawable/ic_notifications" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Notifications" app:tint="#62655F" />
+        <TextView android:layout_width="16dp" android:layout_height="16dp" android:text="5" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="10sp" android:gravity="center" android:background="@drawable/circle_red" android:layout_gravity="top|end" android:layout_marginEnd="8dp" android:contentDescription="5 notifications" />
+      </FrameLayout>
+      <View android:layout_width="match_parent" android:layout_height="3dp" android:background="#FFFFFF" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
+      <ImageButton android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/navMenu" android:src="@drawable/ic_menu" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Menu" app:tint="#62655F" />
+      <View android:layout_width="match_parent" android:layout_height="3dp" android:background="#FFFFFF" />
+    </LinearLayout>
+  </LinearLayout>
+  <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8" />
+  <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp">
+        <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Suggestions" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnSuggestions" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1" />
+        <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Your friends" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnYourFriends" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1" />
+      </LinearLayout>
+      <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Friend requests 12" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" android:padding="16dp" />
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/request0">
+        <TextView android:layout_width="76dp" android:layout_height="76dp" android:text="SI" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_blue" android:gravity="center" android:textStyle="bold" android:id="@+id/friendProfile0" android:clickable="true" android:focusable="true" />
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="14dp">
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sara Iqbal" android:textSize="17sp" android:textColor="#252722" android:textStyle="bold" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="8 mutual friends" android:textSize="12sp" android:textColor="#252722" android:paddingVertical="6dp" />
+          <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Confirm" android:textSize="14sp" android:textColor="#FFFFFF" android:id="@+id/confirm0" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_teal" android:clickable="true" android:focusable="true" android:layout_weight="1" />
+            <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Delete" android:textSize="14sp" android:textColor="#252722" android:id="@+id/delete0" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1" android:layout_marginStart="8dp" />
+          </LinearLayout>
         </LinearLayout>
-    </ScrollView>
+      </LinearLayout>
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/request1">
+        <TextView android:layout_width="76dp" android:layout_height="76dp" android:text="BA" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_purple" android:gravity="center" android:textStyle="bold" android:id="@+id/friendProfile1" android:clickable="true" android:focusable="true" />
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="14dp">
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bilal Ahmed" android:textSize="17sp" android:textColor="#252722" android:textStyle="bold" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="14 mutual friends" android:textSize="12sp" android:textColor="#252722" android:paddingVertical="6dp" />
+          <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Confirm" android:textSize="14sp" android:textColor="#FFFFFF" android:id="@+id/confirm1" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_teal" android:clickable="true" android:focusable="true" android:layout_weight="1" />
+            <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Delete" android:textSize="14sp" android:textColor="#252722" android:id="@+id/delete1" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1" android:layout_marginStart="8dp" />
+          </LinearLayout>
+        </LinearLayout>
+      </LinearLayout>
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/request2">
+        <TextView android:layout_width="76dp" android:layout_height="76dp" android:text="NF" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_green" android:gravity="center" android:textStyle="bold" android:id="@+id/friendProfile2" android:clickable="true" android:focusable="true" />
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="14dp">
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Noor Fatima" android:textSize="17sp" android:textColor="#252722" android:textStyle="bold" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3 mutual friends" android:textSize="12sp" android:textColor="#252722" android:paddingVertical="6dp" />
+          <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Confirm" android:textSize="14sp" android:textColor="#FFFFFF" android:id="@+id/confirm2" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_teal" android:clickable="true" android:focusable="true" android:layout_weight="1" />
+            <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Delete" android:textSize="14sp" android:textColor="#252722" android:id="@+id/delete2" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1" android:layout_marginStart="8dp" />
+          </LinearLayout>
+        </LinearLayout>
+      </LinearLayout>
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/request3">
+        <TextView android:layout_width="76dp" android:layout_height="76dp" android:text="DS" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_red" android:gravity="center" android:textStyle="bold" android:id="@+id/friendProfile3" android:clickable="true" android:focusable="true" />
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="14dp">
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Daniyal Shah" android:textSize="17sp" android:textColor="#252722" android:textStyle="bold" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="21 mutual friends" android:textSize="12sp" android:textColor="#252722" android:paddingVertical="6dp" />
+          <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Confirm" android:textSize="14sp" android:textColor="#FFFFFF" android:id="@+id/confirm3" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_teal" android:clickable="true" android:focusable="true" android:layout_weight="1" />
+            <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Delete" android:textSize="14sp" android:textColor="#252722" android:id="@+id/delete3" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1" android:layout_marginStart="8dp" />
+          </LinearLayout>
+        </LinearLayout>
+      </LinearLayout>
+      <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8" />
+      <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="People you may know" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" android:padding="16dp" />
+    </LinearLayout>
+  </ScrollView>
 </LinearLayout>

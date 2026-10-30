@@ -7,13 +7,14 @@ import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
+    private val splashHandler = Handler(Looper.getMainLooper())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         Ui.prepare(this)
 
-        Handler(Looper.getMainLooper()).postDelayed({
+        splashHandler.postDelayed({
 
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
@@ -21,5 +22,10 @@ class MainActivity : AppCompatActivity() {
 
         }, 1500)
 
+    }
+
+    override fun onDestroy() {
+        splashHandler.removeCallbacksAndMessages(null)
+        super.onDestroy()
     }
 }

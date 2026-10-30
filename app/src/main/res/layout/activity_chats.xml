@@ -1,84 +1,83 @@
-<?xml version="1.0" ?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#FFFFFF">
-    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp" android:orientation="horizontal" android:gravity="center_vertical" android:paddingEnd="12dp">
-        <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnBack" android:src="@drawable/ic_back" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Back"/>
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="Chats" android:textSize="20sp" android:textColor="#252722" android:layout_weight="1" android:textStyle="bold"/>
-        <TextView android:layout_width="wrap_content" android:layout_height="48dp" android:text="✎" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnNewChat" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:paddingHorizontal="14dp"/>
-    </LinearLayout>
-    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8"/>
-    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:fillViewport="true" android:layout_weight="1">
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
-            <EditText android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/etChatSearch" android:hint="Search" android:text="" android:textSize="15sp" android:textColor="#252722" android:textColorHint="#70736D" android:paddingHorizontal="12dp" android:background="@drawable/button_pale" android:inputType="text" android:layout_margin="16dp"/>
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp">
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:gravity="center">
-                    <TextView android:layout_width="48dp" android:layout_height="48dp" android:text="+" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_teal" android:gravity="center" android:textStyle="bold"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Your note" android:textSize="12sp" android:textColor="#252722" android:paddingTop="4dp"/>
-                </LinearLayout>
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:gravity="center">
-                    <TextView android:layout_width="48dp" android:layout_height="48dp" android:text="AK" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_red" android:gravity="center" android:textStyle="bold"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aisha" android:textSize="12sp" android:textColor="#252722" android:paddingTop="4dp"/>
-                </LinearLayout>
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:gravity="center">
-                    <TextView android:layout_width="48dp" android:layout_height="48dp" android:text="OF" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_green" android:gravity="center" android:textStyle="bold"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Omar" android:textSize="12sp" android:textColor="#252722" android:paddingTop="4dp"/>
-                </LinearLayout>
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:gravity="center">
-                    <TextView android:layout_width="48dp" android:layout_height="48dp" android:text="SI" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_blue" android:gravity="center" android:textStyle="bold"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sara" android:textSize="12sp" android:textColor="#252722" android:paddingTop="4dp"/>
-                </LinearLayout>
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:gravity="center">
-                    <TextView android:layout_width="48dp" android:layout_height="48dp" android:text="HA" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_gold" android:gravity="center" android:textStyle="bold"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hamza" android:textSize="12sp" android:textColor="#252722" android:paddingTop="4dp"/>
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/chatRow0" android:clickable="true" android:focusable="true">
-                <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="AK" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_red" android:gravity="center" android:textStyle="bold"/>
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="12dp">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aisha Khan" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sending the photos tonight · 2m" android:textSize="13sp" android:textColor="#252722" android:paddingTop="4dp"/>
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/chatRow1" android:clickable="true" android:focusable="true">
-                <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="ZR" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_blue" android:gravity="center" android:textStyle="bold"/>
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="12dp">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Design crew" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Maya: the new mockups look clean · 15m" android:textSize="13sp" android:textColor="#252722" android:paddingTop="4dp"/>
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/chatRow2" android:clickable="true" android:focusable="true">
-                <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="LM" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_purple" android:gravity="center" android:textStyle="bold"/>
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="12dp">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lina Marsh" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="You: See you at the pier · 1h" android:textSize="13sp" android:textColor="#252722" android:paddingTop="4dp"/>
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/chatRow3" android:clickable="true" android:focusable="true">
-                <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="OF" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_green" android:gravity="center" android:textStyle="bold"/>
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="12dp">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Omar Farooq" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Haha that story was wild · 3h" android:textSize="13sp" android:textColor="#252722" android:paddingTop="4dp"/>
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/chatRow4" android:clickable="true" android:focusable="true">
-                <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="BA" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_purple" android:gravity="center" android:textStyle="bold"/>
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="12dp">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bilal Ahmed" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Thanks, bro! · Mon" android:textSize="13sp" android:textColor="#252722" android:paddingTop="4dp"/>
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/chatRow5" android:clickable="true" android:focusable="true">
-                <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="NF" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_green" android:gravity="center" android:textStyle="bold"/>
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="12dp">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Noor Fatima" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="You: Happy birthday! · Sun" android:textSize="13sp" android:textColor="#252722" android:paddingTop="4dp"/>
-                </LinearLayout>
-            </LinearLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#FFFFFF">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="56dp" android:orientation="horizontal" android:gravity="center_vertical" android:paddingEnd="12dp">
+    <ImageButton android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnBack" android:src="@drawable/ic_back" android:background="?attr/selectableItemBackgroundBorderless" android:padding="12dp" android:contentDescription="Back" app:tint="#0B5F63" />
+    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="Chats" android:textSize="20sp" android:textColor="#252722" android:layout_weight="1" android:textStyle="bold" />
+    <TextView android:layout_width="wrap_content" android:layout_height="48dp" android:text="✎" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnNewChat" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:paddingHorizontal="14dp" />
+  </LinearLayout>
+  <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8" />
+  <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:fillViewport="true" android:layout_weight="1">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+      <EditText android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/etChatSearch" android:hint="Search" android:text="" android:textSize="15sp" android:textColor="#252722" android:textColorHint="#70736D" android:paddingHorizontal="12dp" android:background="@drawable/button_pale" android:inputType="text" android:layout_margin="16dp" />
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:gravity="center">
+          <TextView android:layout_width="48dp" android:layout_height="48dp" android:text="+" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_teal" android:gravity="center" android:textStyle="bold" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Your note" android:textSize="12sp" android:textColor="#252722" android:paddingTop="4dp" />
         </LinearLayout>
-    </ScrollView>
-    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8"/>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
-        <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Chats" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnChatsTab" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1"/>
-        <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="People" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnPeopleTab" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1"/>
-        <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Stories" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnStoriesTab" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1"/>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:gravity="center">
+          <TextView android:layout_width="48dp" android:layout_height="48dp" android:text="AK" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_red" android:gravity="center" android:textStyle="bold" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aisha" android:textSize="12sp" android:textColor="#252722" android:paddingTop="4dp" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:gravity="center">
+          <TextView android:layout_width="48dp" android:layout_height="48dp" android:text="OF" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_green" android:gravity="center" android:textStyle="bold" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Omar" android:textSize="12sp" android:textColor="#252722" android:paddingTop="4dp" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:gravity="center">
+          <TextView android:layout_width="48dp" android:layout_height="48dp" android:text="SI" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_blue" android:gravity="center" android:textStyle="bold" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sara" android:textSize="12sp" android:textColor="#252722" android:paddingTop="4dp" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:gravity="center">
+          <TextView android:layout_width="48dp" android:layout_height="48dp" android:text="HA" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_gold" android:gravity="center" android:textStyle="bold" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hamza" android:textSize="12sp" android:textColor="#252722" android:paddingTop="4dp" />
+        </LinearLayout>
+      </LinearLayout>
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/chatRow0" android:clickable="true" android:focusable="true">
+        <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="AK" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_red" android:gravity="center" android:textStyle="bold" />
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="12dp">
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aisha Khan" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sending the photos tonight · 2m" android:textSize="13sp" android:textColor="#252722" android:paddingTop="4dp" />
+        </LinearLayout>
+      </LinearLayout>
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/chatRow1" android:clickable="true" android:focusable="true">
+        <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="ZR" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_blue" android:gravity="center" android:textStyle="bold" />
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="12dp">
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Design crew" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Maya: the new mockups look clean · 15m" android:textSize="13sp" android:textColor="#252722" android:paddingTop="4dp" />
+        </LinearLayout>
+      </LinearLayout>
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/chatRow2" android:clickable="true" android:focusable="true">
+        <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="LM" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_purple" android:gravity="center" android:textStyle="bold" />
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="12dp">
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lina Marsh" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="You: See you at the pier · 1h" android:textSize="13sp" android:textColor="#252722" android:paddingTop="4dp" />
+        </LinearLayout>
+      </LinearLayout>
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/chatRow3" android:clickable="true" android:focusable="true">
+        <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="OF" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_green" android:gravity="center" android:textStyle="bold" />
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="12dp">
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Omar Farooq" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Haha that story was wild · 3h" android:textSize="13sp" android:textColor="#252722" android:paddingTop="4dp" />
+        </LinearLayout>
+      </LinearLayout>
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/chatRow4" android:clickable="true" android:focusable="true">
+        <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="BA" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_purple" android:gravity="center" android:textStyle="bold" />
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="12dp">
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bilal Ahmed" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Thanks, bro! · Mon" android:textSize="13sp" android:textColor="#252722" android:paddingTop="4dp" />
+        </LinearLayout>
+      </LinearLayout>
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:id="@+id/chatRow5" android:clickable="true" android:focusable="true">
+        <TextView android:layout_width="56dp" android:layout_height="56dp" android:text="NF" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/circle_green" android:gravity="center" android:textStyle="bold" />
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:paddingStart="12dp">
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Noor Fatima" android:textSize="18sp" android:textColor="#252722" android:textStyle="bold" />
+          <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="You: Happy birthday! · Sun" android:textSize="13sp" android:textColor="#252722" android:paddingTop="4dp" />
+        </LinearLayout>
+      </LinearLayout>
     </LinearLayout>
+  </ScrollView>
+  <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DFDFD8" />
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+    <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Chats" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnChatsTab" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1" />
+    <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="People" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnPeopleTab" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1" />
+    <TextView android:layout_width="0dp" android:layout_height="48dp" android:text="Stories" android:textSize="14sp" android:textColor="#252722" android:id="@+id/btnStoriesTab" android:gravity="center" android:textStyle="bold" android:background="@drawable/button_pale" android:clickable="true" android:focusable="true" android:layout_weight="1" />
+  </LinearLayout>
 </LinearLayout>

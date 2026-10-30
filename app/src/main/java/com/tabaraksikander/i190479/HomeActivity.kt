@@ -22,7 +22,11 @@ class HomeActivity : AppCompatActivity() {
         findViewById<View>(R.id.btnLike).setOnClickListener { startActivity(Intent(this, ReactionActivity::class.java)) }
         findViewById<View>(R.id.btnComments).setOnClickListener { startActivity(Intent(this, CommentsActivity::class.java)) }
         findViewById<View>(R.id.btnOwnProfile).setOnClickListener { startActivity(Intent(this, ProfileActivity::class.java)) }
-        findViewById<View>(R.id.btnShare).setOnClickListener { Ui.info(this, "Share post", "Post link copied in this local UI demonstration.") }
+        findViewById<View>(R.id.btnShare).setOnClickListener {
+            val clipboard = getSystemService(android.content.ClipboardManager::class.java)
+            clipboard.setPrimaryClip(android.content.ClipData.newPlainText("Kinnect post", "Sunset walk with the crew. Worth every grain of sand in my shoes."))
+            Toast.makeText(this, "Post text copied", Toast.LENGTH_SHORT).show()
+        }
 
     }
 
