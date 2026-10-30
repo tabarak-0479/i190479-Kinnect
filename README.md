@@ -1,48 +1,53 @@
 # Kinnect — i190479
 
-Kotlin and XML Views assignment by Tabarak Sikander. Package: `com.tabaraksikander.i190479`.
-
+Kotlin/XML Views assignment by Tabarak Sikander. Package: `com.tabaraksikander.i190479`.
 Repository: https://github.com/tabarak-0479/i190479-Kinnect
+
+Open this folder in Android Studio and run `app`. Use the checked-in Gradle wrapper, Android SDK 37 and Studio's Java runtime. `local.properties` is excluded because SDK paths vary by computer.
 
 ## Implementation
 
-The 23 PDF screens have separate Activities and XML layouts. Open this folder in Android Studio. Use the existing Gradle wrapper and installed Android SDK 37. Run the `app` configuration.
+Each of the 23 PDF screens has a separate Activity and `activity_*.xml` layout. Ordinary widgets include LinearLayout, FrameLayout, ScrollView, HorizontalScrollView, TextView, ImageView, ImageButton, EditText, RadioGroup, Spinner and CheckBox. Navigation uses explicit Intents, click listeners and `finish()`. Login/signup and logout use `NEW_TASK | CLEAR_TASK` to prevent returning to authenticated screens after logout.
 
-Navigation uses explicit `Intent` calls, standard click listeners, and `finish()` for Back. Login/signup start a new Home task; logout starts a new Login task using `FLAG_ACTIVITY_NEW_TASK | FLAG_ACTIVITY_CLEAR_TASK`. Main tabs open ordinary Activities, so Back returns to the previous screen.
+The primary color is `#0B5F63`. Reusable shapes/vectors provide borders, avatar rings, rounded cards, reactions, call halos and icons. Bundled vectors bypass the broken Studio icon catalog. No screen is a flattened screenshot. Original landscape illustrations follow the reference's color families.
 
-The illustrated image assets are local Android vector drawables. They are original landscape approximations of the reference's photo placeholders; no screenshot is used as a whole-screen background. Initials remain text avatars. Layouts use LinearLayout, FrameLayout, ScrollView, HorizontalScrollView, ImageView, ImageButton, TextView, EditText, RadioGroup, RadioButton, Spinner and CheckBox.
+Local behavior includes all profile fields and avatar/cover editing; image-selection return and recreation; posts/attachments; editable/shared stories and replies; person-specific profiles/chats with persistent messages; search/category filters; requests; notification actions; menu settings; marketplace filters, listings and seller conversations. Secondary actions without a PDF destination use simple dialogs.
 
-## Concepts to explain in the live demo
+This is a local UI/navigation demonstration. Authentication, recovery, camera, calling and marketplace have no connected accounts, camera capture, audio transport, transactions or backend. The shutter uses an illustrated scene; the call screen does not place a call. Those external services are not required by the supplied rubric.
 
-These supporting techniques go beyond the minimum Activities/XML/Intent baseline and should be confirmed against the class syllabus:
+## Supporting concepts beyond the baseline
 
-- `ViewCompat` / `WindowInsetsCompat` in `Ui.kt`: adds padding for system bars and the keyboard because modern Android draws apps edge to edge. It does not change screen navigation.
-- `SharedPreferences`: local demo profile edits, selected reactions, draft photos, published text and story state. It is a small key/value store; it is not a database or server.
-- `AlertDialog`: simple local menus and explanatory dialogs for secondary controls without separate PDF screens.
-- Adding a `TextView` to a `LinearLayout`: displays newly entered comments and chat messages locally. All original screen content remains XML.
-- Kotlin mutable sets: tracks selected illustration cells in the photo picker.
-- Espresso and ActivityScenario: required workflow tests and extra screenshot checks. These are test-only dependencies.
+The class syllabus was not supplied. Compare these techniques with it; each is explained here as requested:
 
-No Compose, fragments, Navigation Component, ViewModel, dependency injection, networking or backend was added.
+| Concept | Purpose and explanation |
+|---|---|
+| WindowInsetsCompat / WindowInsetsControllerCompat | Read system-bar/keyboard space, add padding and choose legible system-bar icons on current Android. Compatibility handling in Ui.kt. |
+| SharedPreferences | Save small local key/value values: profile fields, image IDs, reactions, requests and messages. `edit().put...().apply()` writes them; `get...()` reads them. No database/server. |
+| Intent extras / Activity results | Pass a person's name or selected image IDs. The picker returns RESULT_OK; onActivityResult reads it. The older API is intentionally used for a simple class-style flow despite deprecation warnings. |
+| Bundle saved state | Restore picker/editor state and timer when an Activity is recreated. Preferences instead persist data beyond that screen. |
+| TextWatcher | Receive edits and filter rows or update strength/send controls. |
+| AlertDialog | Basic local choice/input popups where no separate reference screen exists. |
+| Arrays, lists, LinkedHashSet | Map image IDs/people and track selected pictures without duplicates while retaining their order. |
+| Adding TextView/ImageView rows to LinearLayout | Show newly submitted messages, comments, attachments or listings. Original screen structure stays in XML. |
+| Chronometer | Display elapsed time in the local call UI. |
+| ClipboardManager | Copy post text or a profile name for local sharing. |
+| TouchDelegate / font sizing / resource configurations | Expand small badge hit areas, keep initials inside avatars, stack forms for large text, and use a landscape call layout. |
+| Espresso / ActivityScenario / configuration contexts / Canvas | Test-only workflow, recreation and visual QA tools. Alternate-size XML rendering is distinct from physical-tablet testing. |
 
-## Demo behavior and limits
-
-This assignment is a local UI and navigation implementation. Login uses the prefilled demonstration account. Camera shows an illustrated preview and its shutter opens Story editor; it does not record camera input. Voice call reproduces the reference UI with local mute/speaker/end controls and does not place a call. Chat/comments are local demonstration entries. Marketplace cards open local details; they do not contact sellers. Secondary controls whose destinations are not supplied in the PDF show local dialogs.
-
-Photo picker opens the bundled illustrated collection, supports multiple selections and returns to the preceding screen. Story editor shares to Your story. Profile edits save locally. Some screen text, exact icon outlines, badge placement and illustration geometry differ from the reference; do not describe the result as pixel-perfect without a final side-by-side review.
+No Compose, fragments, Navigation Component, ViewModel, dependency injection, networking or server. Ui.kt is a small shared helper.
 
 ## Verification
 
-Build: `gradlew.bat assembleDebug`
+Build/static checks: `gradlew.bat assembleDebug assembleDebugAndroidTest lintDebug`.
 
-Static checks: `gradlew.bat lintDebug`
+NavigationTest contains the two required Espresso tests: Home → Comments → Back and Login → Menu → Logout → Back, with an authenticated-task assertion. FeatureDataTest and NavigationCoverageTest add ten regression workflows. Test-only waits settle transitions; the app has no artificial interaction delays.
 
-Workflow tests: `gradlew.bat connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.tabaraksikander.i190479.NavigationTest`
+ScreenRenderingTest captures 22 stable phone screens and six landscape views. Splash is verified through timed navigation and XML configuration renders, avoiding a transient screenshot of another app. ConfigurationLayoutTest renders all 23 layouts at 600×960, 960×600, and 390×844 at font scales 1.3 and 2.0, using the same AppCompat widget types as Activities. It asserts pinned-control bounds. Data-changing test classes back up/restore demo preferences.
 
-`NavigationTest` covers Home → Comments → Back and Login → Menu → Logout → Back. `ScreenRenderingTest` additionally opens all 23 screens and saves app-only screenshots, including four landscape checks. Build/lint success does not by itself prove visual fidelity. Waits inside the test code let Activity transitions and rotation settle before assertions/screenshots; they are not app delays.
+See Validation and Rubric-audit in the handoff for executed results. Automated checks do not certify pixel equality, TalkBack usability or an instructor's grade.
 
 ## Submission
 
-The requested ZIP contains `Source Code` and `Layout and Kotlin Files`. Source excludes generated build folders, machine paths and Git metadata. The second folder contains XML/Kotlin files only, preserving their relative paths. Keep the GitHub repository available for the live demonstration.
+The ZIP has exactly two folders: Source Code and Layout and Kotlin Files. Source excludes generated files, machine settings and Git metadata; the second contains only Kotlin/layout XML with relative paths preserved. GitHub preserves the real progressive history.
 
-The assignment also requests the ChatGPT conversation link and prompts. The user has stated that direct AI implementation is now authorized. Preserve the instructor's updated permission and provide a shareable link to the conversation used; the original brief's AI policy otherwise differs from this authorization. See `AI_ASSISTANCE.md`.
+The user explicitly authorized direct AI implementation. AI_ASSISTANCE.md records permission and principal instructions. The student must supply a shareable conversation/full transcript, retain updated permission, confirm the accepted deadline and perform the live demonstration. DEMO_GUIDE.md provides rehearsal and edit/debug examples.
