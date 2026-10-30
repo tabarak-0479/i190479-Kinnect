@@ -2,6 +2,8 @@ package com.tabaraksikander.i190479
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.EditText
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
@@ -11,6 +13,12 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         Ui.prepare(this)
+        findViewById<View>(R.id.btnPasswordEye).setOnClickListener {
+            val field=findViewById<EditText>(R.id.etPassword);it.isSelected=!it.isSelected
+            field.transformationMethod=if(it.isSelected)null else android.text.method.PasswordTransformationMethod.getInstance()
+            field.setSelection(field.text.length);it.contentDescription=if(it.isSelected)"Hide password"else"Show password"
+        }
+
         findViewById<android.view.View>(R.id.tvForgotPassword).setOnClickListener {
             Ui.info(this, "Forgot password?", "Account recovery is not connected to a server in this local UI assignment.")
         }
@@ -18,7 +26,9 @@ class LoginActivity : AppCompatActivity() {
         val btnLogin = findViewById<Button>(R.id.btnLogin)
         val btnCreateAccount = findViewById<Button>(R.id.btnCreateAccount)
 
+        findViewById<View>(R.id.btnRecentAccount).setOnClickListener {btnLogin.performClick()}
         btnLogin.setOnClickListener {
+            if(findViewById<EditText>(R.id.etEmail).text.isBlank()){findViewById<EditText>(R.id.etEmail).error="Enter your email";return@setOnClickListener}
             val intent = Intent(this, HomeActivity::class.java).apply { flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK }
             startActivity(intent)
         }

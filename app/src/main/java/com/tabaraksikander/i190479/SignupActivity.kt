@@ -2,16 +2,27 @@ package com.tabaraksikander.i190479
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.EditText
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class SignupActivity : AppCompatActivity() {
+    private var avatar=-1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
         Ui.prepare(this)
+        avatar=savedInstanceState?.getInt("avatar",-1) ?: -1
+        findViewById<View>(R.id.btnSignupPhoto).setOnClickListener {startActivityForResult(Intent(this,PhotoPickerActivity::class.java),601)}
+        findViewById<View>(R.id.btnPasswordEye).setOnClickListener {
+            val field=findViewById<EditText>(R.id.etSignupPassword);it.isSelected=!it.isSelected
+            field.transformationMethod=if(it.isSelected)null else android.text.method.PasswordTransformationMethod.getInstance()
+            field.setSelection(field.text.length);it.contentDescription=if(it.isSelected)"Hide password"else"Show password"
+        }
+
         if (savedInstanceState == null) {
             findViewById<android.widget.Spinner>(R.id.birthdayDay).setSelection(13)
             findViewById<android.widget.Spinner>(R.id.birthdayMonth).setSelection(2)
@@ -35,8 +46,13 @@ class SignupActivity : AppCompatActivity() {
                 android.widget.Toast.makeText(this, "Please agree to the terms to continue", android.widget.Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+            val first=findViewById<EditText>(R.id.etFirstName);val last=findViewById<EditText>(R.id.etLastName)
+            if(first.text.isBlank() || last.text.isBlank()){first.error="Enter your full name";return@setOnClickListener}
+            getSharedPreferences("demo",MODE_PRIVATE).edit().putString("name",first.text.toString()+" "+last.text).putString("email",findViewById<EditText>(R.id.etSignupEmail).text.toString()).putInt("avatar",avatar).apply()
             val intent = Intent(this, HomeActivity::class.java).apply { flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK }
             startActivity(intent)
         }
     }
+    @Deprecated("Simple Intent result handling") override fun onActivityResult(request:Int,result:Int,data:Intent?){super.onActivityResult(request,result,data);if(request==601 && result==RESULT_OK){avatar=data?.getIntArrayExtra("selection")?.firstOrNull() ?: -1;if(avatar>=0){findViewById<android.widget.ImageView>(R.id.signupAvatarPhoto).apply{visibility=View.VISIBLE;setImageResource(DemoPhotos.resource(avatar))};findViewById<View>(R.id.signupPerson).visibility=View.INVISIBLE}}}
+    override fun onSaveInstanceState(out:Bundle){out.putInt("avatar",avatar);super.onSaveInstanceState(out)}
 }
