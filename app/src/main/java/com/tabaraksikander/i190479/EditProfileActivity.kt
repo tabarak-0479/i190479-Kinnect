@@ -19,9 +19,9 @@ class EditProfileActivity : AppCompatActivity() {
         if (savedInstanceState == null) for ((id,key) in fields) {
             val field = findViewById<EditText>(id); field.setText(prefs.getString(key, field.text.toString()))
         }
-        findViewById<View>(R.id.btnEditAvatar).setOnClickListener { startActivityForResult(Intent(this, PhotoPickerActivity::class.java), 310) }
+        findViewById<View>(R.id.btnEditAvatar).setOnClickListener { startActivityForResult(Intent(this, PhotoPickerActivity::class.java).putExtra("multiple",false).putExtra("selection",if(avatar>=0)intArrayOf(avatar)else intArrayOf()), 310) }
         findViewById<View>(R.id.btnEditAvatarLabel).setOnClickListener { findViewById<View>(R.id.btnEditAvatar).performClick() }
-        findViewById<View>(R.id.btnEditCover).setOnClickListener { startActivityForResult(Intent(this, PhotoPickerActivity::class.java), 311) }
+        findViewById<View>(R.id.btnEditCover).setOnClickListener { startActivityForResult(Intent(this, PhotoPickerActivity::class.java).putExtra("multiple",false).putExtra("selection",if(cover>=0)intArrayOf(cover)else intArrayOf()), 311) }
         findViewById<View>(R.id.btnEditCoverLabel).setOnClickListener { findViewById<View>(R.id.btnEditCover).performClick() }
         findViewById<View>(R.id.btnSave).setOnClickListener {
             if (findViewById<EditText>(R.id.etName).text.isBlank()) { findViewById<EditText>(R.id.etName).error = "Enter your name"; return@setOnClickListener }

@@ -20,7 +20,7 @@ class ProfileActivity : AppCompatActivity() {
             for(other in intArrayOf(R.id.profileTab0,R.id.profileTab1,R.id.profileTab2,R.id.profileTab3)) findViewById<View>(other).setBackgroundResource(if(other==id) R.drawable.chip_active else android.R.color.transparent)
             findViewById<View>(R.id.profileDetailsSection).visibility=if(i==0) View.VISIBLE else View.GONE
             findViewById<View>(R.id.profileGallerySection).visibility=if(i==1) View.VISIBLE else View.GONE
-            findViewById<TextView>(R.id.profileTabEmpty).apply { visibility=if(i>=2) View.VISIBLE else View.GONE; text=if(i==2) "No videos yet" else "No groups joined" }
+            findViewById<TextView>(R.id.profileTabEmpty).apply { visibility=if(i>=2) View.VISIBLE else View.GONE; text=if(i==2) "No videos yet" else if(getSharedPreferences("demo",MODE_PRIVATE).getBoolean("joinedGroup",false))"Omar’s Photography Circle · Joined" else "No groups joined" }
         }
     }
     override fun onResume() {

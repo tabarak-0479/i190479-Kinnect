@@ -42,11 +42,12 @@ class HomeActivity : AppCompatActivity() {
         findViewById<ImageView>(R.id.homeAvatarPhoto).apply{visibility=if(avatar>=0)View.VISIBLE else View.GONE;if(avatar>=0)setImageResource(DemoPhotos.resource(avatar))}
         val published = p.getString("post", "") ?: ""
         val postView = findViewById<TextView>(R.id.publishedPost)
-        postView.text = "Jacob West · Just now\n\n" + published
+        postView.text = (p.getString("name","Jacob West") ?: "Jacob West")+" · Just now\n\n"+published
         postView.visibility = if (published.isBlank()) View.GONE else View.VISIBLE
         val reaction=p.getString("reaction", "Like") ?: "Like"
         findViewById<View>(R.id.btnLike).contentDescription=reaction
         findViewById<TextView>(R.id.btnLikeLabel).text=reaction
+        findViewById<TextView>(R.id.btnLikeLabel).setTextColor(android.graphics.Color.parseColor(if(p.contains("reaction"))"#0B5F63"else"#62655F"))
         findViewById<ImageView>(R.id.btnLikeIcon).setImageResource(when(reaction){"Love"->R.drawable.reaction_love_icon;"Haha"->R.drawable.reaction_haha;"Wow"->R.drawable.reaction_wow;"Sad"->R.drawable.reaction_sad;"Angry"->R.drawable.reaction_angry;else->R.drawable.ic_like})
         val attachments=findViewById<LinearLayout>(R.id.publishedPhotos);attachments.removeAllViews()
         if(published.isNotBlank())for(value in (p.getString("postImages", "") ?: "").split(",").filter{it.isNotBlank()}) { val image=ImageView(this);image.setImageResource(DemoPhotos.resource(value.toInt()));image.scaleType=ImageView.ScaleType.CENTER_CROP;image.contentDescription="Published photo";attachments.addView(image,LinearLayout.LayoutParams(Ui.dp(this,150),Ui.dp(this,120))) }

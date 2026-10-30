@@ -13,6 +13,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         Ui.prepare(this)
+        findViewById<View>(R.id.tvLanguage).setOnClickListener {Ui.choose(this,"Language",arrayOf("English (UK)","English (US)")){value->(it as android.widget.TextView).text=value}}
         findViewById<View>(R.id.btnPasswordEye).setOnClickListener {
             val field=findViewById<EditText>(R.id.etPassword);it.isSelected=!it.isSelected
             field.transformationMethod=if(it.isSelected)null else android.text.method.PasswordTransformationMethod.getInstance()

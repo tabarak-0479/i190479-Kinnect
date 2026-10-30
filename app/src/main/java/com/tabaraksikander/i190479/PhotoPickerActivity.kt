@@ -15,12 +15,14 @@ class PhotoPickerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState); setContentView(R.layout.activity_photo_picker); Ui.prepare(this)
         selected.addAll((savedInstanceState?.getIntArray("selection") ?: intent.getIntArrayExtra("selection") ?: intArrayOf(0, 5)).toList())
-        multiple = savedInstanceState?.getBoolean("multiple", true) ?: true
+        multiple = savedInstanceState?.getBoolean("multiple", true) ?: intent.getBooleanExtra("multiple",true)
+        if(!multiple && selected.size>1){val first=selected.first();selected.clear();selected.add(first)}
         for (i in cells.indices) findViewById<View>(cells[i]).setOnClickListener {
             if (!multiple) { selected.clear(); selected.add(i) }
             else if (!selected.add(i)) selected.remove(i)
             findViewById<ImageView>(R.id.photoPreview).setImageResource(DemoPhotos.resource(i)); refresh()
         }
+        findViewById<View>(R.id.btnCrop).setOnClickListener{val v=findViewById<ImageView>(R.id.photoPreview);v.scaleType=if(v.scaleType==ImageView.ScaleType.CENTER_CROP)ImageView.ScaleType.FIT_CENTER else ImageView.ScaleType.CENTER_CROP}
         findViewById<View>(R.id.btnMultiple).setOnClickListener {
             multiple = !multiple
             if (!multiple && selected.size > 1) { val first = selected.first(); selected.clear(); selected.add(first) }
@@ -32,6 +34,7 @@ class PhotoPickerActivity : AppCompatActivity() {
         findViewById<View>(R.id.btnTakePhoto).setOnClickListener { startActivity(Intent(this, CameraActivity::class.java)) }
         findViewById<View>(R.id.btnVideo).setOnClickListener { startActivity(Intent(this, CameraActivity::class.java).putExtra("mode", "Video")) }
         findViewById<View>(R.id.btnGallery).setOnClickListener { findViewById<ScrollView>(R.id.pickerScroll).smoothScrollTo(0, 0) }
+        selected.lastOrNull()?.let{findViewById<ImageView>(R.id.photoPreview).setImageResource(DemoPhotos.resource(it))}
         refresh()
     }
     private fun refresh() {
@@ -42,6 +45,7 @@ class PhotoPickerActivity : AppCompatActivity() {
             val mark = findViewById<TextView>(marks[i]); val position = selected.indexOf(i)
             mark.text = if (position >= 0) (position + 1).toString() else ""
             mark.setBackgroundResource(if (position >= 0) R.drawable.selection_on else R.drawable.selection_off)
+            findViewById<View>(cells[i]).isSelected=position>=0
             findViewById<View>(cells[i]).contentDescription = "Photo ${i+1}, " + if (position >= 0) "selected ${position+1}" else "not selected"
         }
     }

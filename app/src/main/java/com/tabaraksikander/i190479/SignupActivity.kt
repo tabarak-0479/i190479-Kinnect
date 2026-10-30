@@ -16,7 +16,13 @@ class SignupActivity : AppCompatActivity() {
         setContentView(R.layout.activity_signup)
         Ui.prepare(this)
         avatar=savedInstanceState?.getInt("avatar",-1) ?: -1
-        findViewById<View>(R.id.btnSignupPhoto).setOnClickListener {startActivityForResult(Intent(this,PhotoPickerActivity::class.java),601)}
+        if(avatar>=0)findViewById<android.widget.ImageView>(R.id.signupAvatarPhoto).apply{visibility=View.VISIBLE;setImageResource(DemoPhotos.resource(avatar))}
+        findViewById<EditText>(R.id.etSignupPassword).addTextChangedListener(object:android.text.TextWatcher{
+            override fun beforeTextChanged(s:CharSequence?,start:Int,count:Int,after:Int){}
+            override fun afterTextChanged(s:android.text.Editable?){}
+            override fun onTextChanged(s:CharSequence?,start:Int,before:Int,count:Int){val strength=if((s?.length?:0)>=10)3 else if((s?.length?:0)>=6)2 else if(s.isNullOrEmpty())0 else 1;for((i,id)in intArrayOf(R.id.strength0,R.id.strength1,R.id.strength2).withIndex())findViewById<View>(id).setBackgroundResource(if(i>=strength)R.drawable.progress_pale else if(strength==3)R.drawable.progress_teal else R.drawable.progress_orange);findViewById<TextView>(R.id.strengthLabel).text=listOf("","Weak","Medium","Strong")[strength]}
+        })
+        findViewById<View>(R.id.btnSignupPhoto).setOnClickListener {startActivityForResult(Intent(this,PhotoPickerActivity::class.java).putExtra("multiple",false),601)}
         findViewById<View>(R.id.btnPasswordEye).setOnClickListener {
             val field=findViewById<EditText>(R.id.etSignupPassword);it.isSelected=!it.isSelected
             field.transformationMethod=if(it.isSelected)null else android.text.method.PasswordTransformationMethod.getInstance()
@@ -29,7 +35,7 @@ class SignupActivity : AppCompatActivity() {
             findViewById<android.widget.Spinner>(R.id.birthdayYear).setSelection(22)
         }
 
-        val btnBack = findViewById<TextView>(R.id.btnBack)
+        val btnBack = findViewById<View>(R.id.btnBack)
         val btnCreateAccount = findViewById<Button>(R.id.btnCreateAccountSignup)
         val tvAlreadyLogin = findViewById<TextView>(R.id.tvAlreadyLogin)
 
