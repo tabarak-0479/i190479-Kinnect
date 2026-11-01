@@ -30,7 +30,7 @@
     <Space android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:minHeight="32dp" />
     <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnCreateAccount" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginBottom="12dp" android:background="@drawable/rounded_teal_outline" android:text="@string/ui_create_new_account" android:textAllCaps="false" android:textColor="@color/kinnect_teal" android:textSize="14sp" android:textStyle="bold" android:backgroundTint="@null" android:letterSpacing="0" app:backgroundTint="@null" />
     <LinearLayout android:id="@+id/tvFooter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/gray" android:textSize="12sp" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:gravity="center" android:baselineAligned="false">
-      <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/kinnect_logo" android:importantForAccessibility="no" app:tint="#62655F" />
+      <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/kinnect_footer_mark" android:importantForAccessibility="no" />
       <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ui_kinnect_from_smd" android:textSize="13sp" android:textColor="#62655F" android:paddingStart="8dp" />
     </LinearLayout>
   </LinearLayout>
