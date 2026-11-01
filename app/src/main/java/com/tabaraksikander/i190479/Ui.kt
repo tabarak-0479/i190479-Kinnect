@@ -147,6 +147,14 @@ object Ui {
                         if (caption is TextView && caption.layoutParams.width == -1) {
                             caption.layoutParams = caption.layoutParams.apply { height = dp(context, 84) }
                         }
+                        if (frame === card && caption is android.widget.FrameLayout) {
+                            // Keep the overlapping plus badge above the enlarged two-line caption.
+                            val badge = caption.layoutParams as? android.widget.FrameLayout.LayoutParams
+                            if (badge != null && badge.gravity and android.view.Gravity.BOTTOM == android.view.Gravity.BOTTOM) {
+                                badge.bottomMargin = dp(context, 84)
+                                caption.layoutParams = badge
+                            }
+                        }
                     }
                 }
             }
